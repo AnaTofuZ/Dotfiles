@@ -1,0 +1,98 @@
+snippet u
+    use strict;
+    use warnings;
+
+    ${0}
+
+snippet uu
+    use strict;
+    use warnings;
+    use utf8;
+
+    ${0}
+
+snippet us
+    #!/usr/bin/env perl
+    use strict;
+    use warnings;
+
+    ${0}
+
+snippet uus
+    #!/usr/bin/env perl
+    use strict;
+    use warnings;
+    use utf8;
+
+    ${0}
+
+snippet D
+    warn Dumper ${0}
+
+snippet DD
+    use Data::Dumper;
+
+snippet DW
+    use Data::Dumper;
+    warn Dumper ${0}
+
+snippet dd
+    use DDP { deparse => 1 };
+
+snippet dw
+    use DDP { deparse => 1 };
+    DDP::p ${0}
+
+snippet pkg
+    package ${1:package};
+    use strict;
+    use warnings;
+    use utf8;
+
+    ${2:code}
+
+    1;
+
+snippet fs
+    use feature 'say';
+
+
+snippet lib
+    use FindBin;
+    use lib "$FindBin::Bin/${1:local/lib/perl5}";
+    ${0}
+
+snippet mouse
+
+    use Mouse;
+
+    ${1:code}
+
+    no Mouse;
+    __PACKAGE__->meta->make_immutable;
+
+
+snippet pkkg
+    package ${1:`expand("%:t:r")`};
+    use strict;
+    use warnings;
+    use utf8;
+
+    ${2:code}
+
+    1;
+
+snippet enp
+    print encode_utf8(${0});
+
+snippet sap
+    say encode_utf8(${0});
+
+snippet enc
+    use Encode;
+
+snippet binmode
+    binmode STDIN,":encoding(UTF-8)";
+    binmode STDOUT,"encoding(UTF-8)";
+    binmode STDERR,"encoding(UTF-8)";
+    ${0}

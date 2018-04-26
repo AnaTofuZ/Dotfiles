@@ -1,1 +1,49 @@
-/Users/e155730/.gitconfig
+[user]
+	name = AnaTofuZ
+	email = e155730@ie.u-ryukyu.ac.jp
+	username = AnaTofuZ
+	signingkey = 4A3672920E21A8AE
+[filter "lfs"]
+	clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+	required = true
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+	grep = auto
+	diff = auto
+[core]
+	editor = nvim -c \"set fenc=utf-8\"
+	excludesfile = /Users/e155730/.gitignore
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[ghq]
+    root = ~/src
+[push]
+	default = current
+[alias]
+	st = status
+	co = checkout
+	ci = commit -v
+	di = diff
+	br = branch
+	puhs = push
+	psuh = push
+	pus = push
+	puh = push
+	pl = !git pull && git submodule update --init
+[browse-remote "github.com"]
+	top = https://{host}/{path}
+	ref = https://{host}/{path}/tree/{short_ref}
+	rev = https://{host}/{path}/commit/{commit}
+	pr = https://{host}/{path}/pull/{short_ref}
+	file = "https://{host}/{path}/{file.directory? and :tree or :blob}/{short_rev}/{file}{lines && \"#L%s\" % lines.join(\"-\")}"
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg1
