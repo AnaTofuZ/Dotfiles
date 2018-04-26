@@ -5,7 +5,7 @@
 	signingkey = 4A3672920E21A8AE
 [filter "lfs"]
 	clean = git-lfs clean %f
-    smudge = git-lfs smudge %f
+	smudge = git-lfs smudge %f
 	required = true
 [color]
 	ui = auto
