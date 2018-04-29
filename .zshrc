@@ -19,21 +19,17 @@ fi
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 # }}}
-
 # GOPATH {{{
 export GOPAT=$HOME/workspace/go
 export PATH=$PATH:$(go env GOPATH)/bin
 #}}}
-
 # hub {{{
 function git(){hub "$@"}
 # }}}
-
 # man {{{
 # cf. https://qiita.com/yu-ichiro/items/ea9c672e2d7488416db9
 alias man='env LANG=C man'
 # }}}
-
 # gpg-agent {{{
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 # }}}
@@ -103,4 +99,34 @@ function peco-z-search
  }
 zle -N peco-z-search
 bindkey '^[pz' peco-z-search
+# }}}
+# direnv {{{
+eval "$(direnv hook zsh)"
+# }}}
+# git alias {{{
+alias grau="git remote add upstream"
+alias gplu="git pull upstream master"
+# }}}
+# weather{{{
+weather(){
+    curl -4 wttr.in./okinawa
+}
+# }}}
+# lvc {{{
+function lvc() { if [ -f $1 ]; then less $1 | lv -c; fi;  }
+# cf. https://qiita.com/chezou/items/e45b99c7080a3ded0f13
+# }}}
+# pyenv {{{
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+alias brew="env PATH=${PATH/\/Users\/anatofuz\/\.pyenv\/shims:/} brew"
+# cf. http://www.task-notes.com/entry/20141223/1419324649
+# }}}
+# aws {{{
+export PATH=~/.local/bin:$PATH
+# cf. https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-install-macos.html
+source $HOME/.local/bin/aws_zsh_completer.sh
 # }}}
