@@ -130,3 +130,20 @@ export PATH=~/.local/bin:$PATH
 # cf. https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-install-macos.html
 source $HOME/.local/bin/aws_zsh_completer.sh
 # }}}
+# gitignore {{{
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+#}}}
+# screenshot-type {{{
+function screenshot-type () {
+    if [ $# -ne 1 ]; then
+        echo "require bmp,gif,jpg,pdf,png,tiff"
+        return 1
+    else 
+        defaults write com.apple.screencapture type $1
+    fi
+}
+function _screenshot-type {
+    _values 'type' 'jpg' 'png' 'pdf' 'bmp' 'gif' 'tiff'
+}
+compdef _screenshot-type screenshot-type
+# }}}
