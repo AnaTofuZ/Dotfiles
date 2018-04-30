@@ -109,7 +109,7 @@ alias gplu="git pull upstream master"
 # }}}
 # weather{{{
 weather(){
-    curl -4 wttr.in./okinawa
+    curl -4 wttr.in./$@
 }
 # }}}
 # lvc {{{
@@ -146,4 +146,7 @@ function _screenshot-type {
     _values 'type' 'jpg' 'png' 'pdf' 'bmp' 'gif' 'tiff'
 }
 compdef _screenshot-type screenshot-type
+# }}}
+# longman {{{
+function longman(){ open "https://www.ldoceonline.com/jp/search/?q=$*" }
 # }}}
