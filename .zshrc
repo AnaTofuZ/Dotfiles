@@ -150,3 +150,11 @@ compdef _screenshot-type screenshot-type
 # longman {{{
 function longman(){ open "https://www.ldoceonline.com/jp/search/?q=$*" }
 # }}}
+# 補完{{{
+autoload -U compinit
+compinit
+#}}}
+# google cloud sdk {{{
+source /Users/anatofuz/src/google-cloud-sdk/completion.zsh.inc
+source /Users/anatofuz/src/google-cloud-sdk/path.zsh.inc
+# }}}
