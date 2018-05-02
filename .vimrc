@@ -2,70 +2,50 @@
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
-  endif
-"
-  " Required:
-  set runtimepath^=/Users/e155730/.vim/repos/github.com/Shougo/dein.vim
-"
-  " Required:
-  call dein#begin(expand('/Users/e155730/.vim'))
-"
+endif
+
+" Required:
+set runtimepath+=/Users/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/Users/anatofuz/.cache/dein')
+  call dein#begin('/Users/anatofuz/.cache/dein')
+
   " Let dein manage dein
   " Required:
-  call dein#add('Shougo/dein.vim')
-"
+  call dein#add('/Users/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim')
+
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
 
-  " You can specify revision/branch/tag.
+  call dein#add('Shougo/neocomplete.vim')
+
+  call dein#add('osyo-manga/vim-anzu')
+  call dein#add('junegunn/vim-easy-align')
+  call dein#add('tomtom/tcomment_vim')
+
+  call dein#add('w0ng/vim-hybrid')
+  call dein#add('chriskempson/vim-tomorrow-theme')
+  call dein#add('itchyny/lightline.vim')
+
 
   " Required:
   call dein#end()
-
-  " Required:
-  filetype plugin indent on
-
-  " If you want to install not installed plugins on startup.
-  "if dein#check_install()
-  "  call dein#install()
-  "endif
-"
-"  "End dein Scripts-------------------------
-"
-""}}}
-""deinの設定"{{{
-"if has('vim_starting')
-"  set nocompatible
-"  set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
-"endif
-""}}}
-"deinで使うプラグイン導入{{{
-call dein#begin(expand('~/.vim/dein'))
-let g:dein#types#git#default_protocol='https'
-
-call dein#add('Shougo/dein.vim')
-
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
-
-call dein#add('osyo-manga/vim-anzu')
-call dein#add('junegunn/vim-easy-align')
-call dein#add('tomtom/tcomment_vim')
-
-call dein#add('w0ng/vim-hybrid')
-call dein#add('chriskempson/vim-tomorrow-theme')
-call dein#add('itchyny/lightline.vim')
-
-
-call dein#end()
-filetype plugin indent on
-
-if dein#check_install()
-  call dein#install()
+  call dein#save_state()
 endif
-"}}}
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+" }}}
 " ----------------------------------------------------
 set nocompatible
 filetype off
