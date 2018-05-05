@@ -8,13 +8,11 @@
 # 上書き禁止
 setopt noclobber
 
-# Source Prezto.
+# Source Prezto.{{{
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-
-# Customize to your needs...
-
+# }}}
 # plenv {{{
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
@@ -157,4 +155,7 @@ compinit
 # google cloud sdk {{{
 source /Users/anatofuz/src/google-cloud-sdk/completion.zsh.inc
 source /Users/anatofuz/src/google-cloud-sdk/path.zsh.inc
+# }}}
+# zplug {{{
+#source ~/.zplug/init.zsh
 # }}}
