@@ -184,23 +184,28 @@ endif
 
 
 " Unite ----------------------------------------------
-let g:unite_enable_start_insert=1
-let g:unite_enable_split_vertically = 0
-let g:unite_winheight = 15
-let g:unite_winwidth = 40
-"noremap <C-B> :Unite buffer<CR>
-noremap <C-N> :Unite -buffer-name=file file<CR>
-noremap <C-Z> :Unite file_mru<CR>
-noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
-au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-" ----------------------------------------------------
+"let g:unite_enable_start_insert=1
+"let g:unite_enable_split_vertically = 0
+"let g:unite_winheight = 15
+"let g:unite_winwidth = 40
+""noremap <C-B> :Unite buffer<CR>
+"noremap <C-N> :Unite -buffer-name=file file<CR>
+"noremap <C-Z> :Unite file_mru<CR>
+"noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
+"au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+"au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+"au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+"au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+"au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+"au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+"" ----------------------------------------------------
 
-
+" Easy align---{{{
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+"}}}---
 
 " ctags auto save ------------------------------------
 let g:auto_ctags = 1
