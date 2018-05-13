@@ -18,7 +18,7 @@ export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 # }}}
 # GOPATH {{{
-export GOPAT=$HOME/workspace/go
+export GOPATH=$HOME/workspace/go
 export PATH=$PATH:$(go env GOPATH)/bin
 #}}}
 # hub {{{
@@ -38,11 +38,11 @@ eval "$(rbenv init -)"
 alias be="bundle exec"
 # }}}
 # cr slide {{{
-function _slide-cr {
-    _values 'command' 'new' 'build' 'upload' 'build-open' 'edit' 'open' 'memo'
-}
-
-compdef _slide-cr slide-cr
+#function _slide-cr {
+#    _values 'command' 'new' 'build' 'upload' 'build-open' 'edit' 'open' 'memo'
+#}
+#
+#compdef _slide-cr slide-cr
 # }}}
 # CbCgcc {{{
 alias cbcgcc=/Users/anatofuz/workspace/cr/build_gcc/bin/gcc
@@ -124,9 +124,9 @@ alias brew="env PATH=${PATH/\/Users\/anatofuz\/\.pyenv\/shims:/} brew"
 # cf. http://www.task-notes.com/entry/20141223/1419324649
 # }}}
 # aws {{{
-export PATH=~/.local/bin:$PATH
+export PATH=/Users/anatofuz/.pyenv/versions/3.6.5/bin:$PATH
 # cf. https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-install-macos.html
-source $HOME/.local/bin/aws_zsh_completer.sh
+source /Users/anatofuz/.pyenv/versions/3.6.5/bin/aws_zsh_completer.sh
 # }}}
 # gitignore {{{
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
@@ -158,4 +158,7 @@ source /Users/anatofuz/src/google-cloud-sdk/path.zsh.inc
 # }}}
 # zplug {{{
 #source ~/.zplug/init.zsh
+# }}}
+# pipenv {{{
+eval "$(pipenv --completion)"
 # }}}
