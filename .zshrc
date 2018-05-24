@@ -6,7 +6,7 @@
 #
 
 # 上書き禁止
-setopt noclobber
+setopt -o noclobber
 
 # Source Prezto.{{{
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -161,4 +161,19 @@ source /Users/anatofuz/src/google-cloud-sdk/path.zsh.inc
 # }}}
 # pipenv {{{
 eval "$(pipenv --completion)"
+# }}}
+# cat-gemfile{{{
+function cat-gemfile()
+{
+    cat <<EOF
+source 'http://rubygems.org'
+ruby '2.5.1'
+EOF
+}
+# }}}
+# carton {{{
+alias ce='carton exec --'
+# }}}
+# qt {{{
+export PATH="/usr/local/opt/qt/bin:$PATH"
 # }}}
