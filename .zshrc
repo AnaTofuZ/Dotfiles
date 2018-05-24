@@ -6,7 +6,7 @@
 #
 
 # 上書き禁止
-setopt -o noclobber
+setopt noclobber
 
 # Source Prezto.{{{
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
