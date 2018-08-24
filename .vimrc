@@ -28,6 +28,7 @@ if dein#load_state('/Users/anatofuz/.cache/dein')
   call dein#add('w0ng/vim-hybrid')
   call dein#add('chriskempson/vim-tomorrow-theme')
   call dein#add('itchyny/lightline.vim')
+  call dein#add('zerowidth/vim-copy-as-rtf')
 
 
   " Required:

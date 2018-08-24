@@ -20,6 +20,7 @@ eval "$(plenv init -)"
 # GOPATH {{{
 export GOPATH=$HOME/workspace/go
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 #}}}
 # hub {{{
 function git(){hub "$@"}
@@ -46,6 +47,9 @@ alias be="bundle exec"
 # }}}
 # CbCgcc {{{
 alias cbcgcc=/Users/anatofuz/workspace/cr/build_gcc/bin/gcc
+# }}}
+# CbClang{{{
+alias cbclang=/Users/anatofuz/workspace/cr/build_llvm/bin/clang
 # }}}
 # nodebrew {{{
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -124,7 +128,7 @@ alias brew="env PATH=${PATH/\/Users\/anatofuz\/\.pyenv\/shims:/} brew"
 # cf. http://www.task-notes.com/entry/20141223/1419324649
 # }}}
 # aws {{{
-export PATH=/Users/anatofuz/.pyenv/versions/3.6.5/bin:$PATH
+#export PATH=/Users/anatofuz/.pyenv/versions/3.6.5/bin:$PATH
 # cf. https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-install-macos.html
 source /Users/anatofuz/.pyenv/versions/3.6.5/bin/aws_zsh_completer.sh
 # }}}
@@ -180,4 +184,28 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 # heroku autocomplete setup{{{
 HEROKU_AC_ZSH_SETUP_PATH=/Users/anatofuz/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 #}}}
+# gpg {{{
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+#}}}
+#perlib {{{
+alias perlib='perl -Ilocal/lib/perl5'
+#}}}
+#LC_ALL{{{
+#export LC_ALL="ja_JP.UTF-8"
+##export LC_CTYPE=C
+#export LANG="ja_JP.UTF-8"
+#}}}
+# sandbox {{{
+sandbox(){
+    mkdir $PWD/.sandbox
+    cd .sandbox
+}
+rmsandbox(){
+    cd $PWD/../
+    rm -rf .sandbox
+}
+# }}}
+# ghq {{{
+alias g='cd $(ghq root)/$(ghq list | peco)'
+alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+# }}}
