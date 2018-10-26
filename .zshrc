@@ -117,6 +117,7 @@ weather(){
 # lvc {{{
 function lvc() { if [ -f $1 ]; then less $1 | lv -c; fi;  }
 # cf. https://qiita.com/chezou/items/e45b99c7080a3ded0f13
+alias lv='lv -c'
 # }}}
 # pyenv {{{
 export PYENV_ROOT="$HOME/.pyenv"
@@ -209,3 +210,34 @@ rmsandbox(){
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 # }}}
+# zsh-cmpletation{{{
+fpath=(/usr/local/share/zsh-completions $fpath)
+# }}}
+# bat {{{
+export BAT_THEME="GitHub"
+# }}}
+# hd{{{
+
+host=$HOST:fr
+export dirfile="$HOME/.dirfile.$host"
+
+function cd {
+    builtin cd "$@"
+    echo $PWD >| $dirfile
+}
+
+function hd {
+    cd `cat $dirfile`
+}
+
+# }}}
+# brew llvm {{{
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+# }}}
+# CBC_COMPILER {{{
+export CBC_COMPILER=$HOME/workspace/cr/build_llvm/bin/clang
+# }}}
+# toFullwidth {{{
+alias toFullwidth="perl -C -Mutf8 -pe 'tr/0-9a-zA-Z/０-９ａ-ｚＡ-Ｚ/'"
+# }}}
+export PATH="/usr/local/opt/libarchive/bin:$PATH"
