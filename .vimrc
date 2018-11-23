@@ -21,11 +21,11 @@ if dein#load_state('/Users/anatofuz/.cache/dein')
 
   call dein#add('Shougo/neocomplete.vim')
 
-  call dein#add('osyo-manga/vim-anzu')
+  "call dein#add('osyo-manga/vim-anzu')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('tomtom/tcomment_vim')
 
-  call dein#add('w0ng/vim-hybrid')
+  "call dein#add('w0ng/vim-hybrid')
   call dein#add('chriskempson/vim-tomorrow-theme')
   call dein#add('itchyny/lightline.vim')
   call dein#add('zerowidth/vim-copy-as-rtf')
@@ -67,7 +67,7 @@ set ruler
 set showcmd
 set title
 set number
-set ignorecase                 " 大文字小文字を無視して検索
+"set ignorecase                 " 大文字小文字を無視して検索
 set smartcase                  " 大文字を入力すると大文字小文字無視を解除
 set wrapscan                   " 先頭に戻って検索
 set hlsearch                   " 前回の検索結果が残ってればハイライトする
@@ -103,26 +103,26 @@ highlight Comment ctermfg=7
 "highlight PMenuSbar ctermbg=4
 " ----------------------------------------------------
 
-" search with anzu -----------------------------------
-let g:lightline = {
-    \ 'active': {
-    \   'left': [
-    \       ['mode', 'paste'],
-    \       ['readonly', 'filename', 'modified', 'anzu']
-    \   ]
-    \ },
-    \ 'component_function': {
-    \   'anzu': 'anzu#search_status'
-    \ }
-    \ }
-
-" vim-anzu
-nmap n <Plug>(anzu-n)
-nmap N <Plug>(anzu-N)
-nmap * <Plug>(anzu-star)
-nmap # <Plug>(anzu-sharp)
-nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
-"augroup vim-anzu
+"" search with anzu -----------------------------------
+"let g:lightline = {
+"    \ 'active': {
+"    \   'left': [
+"    \       ['mode', 'paste'],
+"    \       ['readonly', 'filename', 'modified', 'anzu']
+"    \   ]
+"    \ },
+"    \ 'component_function': {
+"    \   'anzu': 'anzu#search_status'
+"    \ }
+"    \ }
+"
+"" vim-anzu
+"nmap n <Plug>(anzu-n)
+"nmap N <Plug>(anzu-N)
+"nmap * <Plug>(anzu-star)
+"nmap # <Plug>(anzu-sharp)
+"nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+""augroup vim-anzu
 "    autocmd!
 "    autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
 "augroup END
@@ -166,7 +166,7 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags

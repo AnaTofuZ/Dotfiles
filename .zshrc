@@ -241,3 +241,15 @@ export CBC_COMPILER=$HOME/workspace/cr/build_llvm/bin/clang
 alias toFullwidth="perl -C -Mutf8 -pe 'tr/0-9a-zA-Z/０-９ａ-ｚＡ-Ｚ/'"
 # }}}
 export PATH="/usr/local/opt/libarchive/bin:$PATH"
+export PATH="/Users/anatofuz/.local/bin:$PATH"
+
+# bison {{{
+export PATH="/usr/local/opt/bison/bin:$PATH"
+LDFLAGS="-L/usr/local/opt/bison/lib"
+# }}}
+# $HOME/src/bin {{{
+export PATH="$HOME/src/bin:$PATH"
+# }}}
+export PATH="/usr/local/opt/m4/bin:$PATH"
+export PATH="/Users/anatofuz/.cabal/bin:$PATH"
+alias ls="ls -GF"
