@@ -108,6 +108,7 @@ eval "$(direnv hook zsh)"
 # git alias {{{
 alias grau="git remote add upstream"
 alias gplu="git pull upstream master"
+alias gia="git add"
 # }}}
 # weather{{{
 weather(){
@@ -232,7 +233,7 @@ function hd {
 
 # }}}
 # brew llvm {{{
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
 # }}}
 # CBC_COMPILER {{{
 export CBC_COMPILER=$HOME/workspace/cr/build_llvm/bin/clang
@@ -251,5 +252,25 @@ LDFLAGS="-L/usr/local/opt/bison/lib"
 export PATH="$HOME/src/bin:$PATH"
 # }}}
 export PATH="/usr/local/opt/m4/bin:$PATH"
-export PATH="/Users/anatofuz/.cabal/bin:$PATH"
+#export PATH="/Users/anatofuz/.cabal/bin:$PATH"
 alias ls="ls -GF"
+export LDFLAGS="-L/usr/local/opt/libffi/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+export blogdir="/Users/anatofuz/Documents/blog"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+# for nokogiri {{{
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="/usr/local/opt/libxslt/bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/libxml2/lib"
+export CPPFLAGS="-I/usr/local/opt/libxml2/include"
+export LDFLAGS="-L/usr/local/opt/libxslt/lib"
+export CPPFLAGS="-I/usr/local/opt/libxslt/include"
+export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
+export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig"
+# }}}
+# perl6 zef path {{{
+export PATH="$(readlink $(where perl6) | perl -pne 's[\.\.][/usr/local]; s[(.*)/bin/perl6][$1/share/perl6/site/bin]'):$PATH"
+# }}}

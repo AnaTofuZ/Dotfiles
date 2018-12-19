@@ -1,4 +1,4 @@
-"dein 初期設定{{{
+""dein 初期設定{{{
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -165,9 +165,9 @@ inoremap <expr><BS>   neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-"autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+""autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " ----------------------------------------------------
@@ -253,3 +253,13 @@ inoremap jj <ESC>
 "}}}
 
 set foldmethod=marker
+" Disable highlight italic in Markdown
+ autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=plaintext
+
+" 最後にカーソルがあった場所に移動
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
+
+
