@@ -19,7 +19,7 @@ fi
 
 export EDITOR='vim'
 export VISUAL='vim'
-export PAGER='lv -cOu8'
+export PAGER='less'
 
 #
 # Language

@@ -1,8 +1,8 @@
 [user]
 	name = AnaTofuZ
-	email = e155730@ie.u-ryukyu.ac.jp
+	email = anatofuz@gmail.com
 	username = AnaTofuZ
-	signingkey = 4A3672920E21A8AE
+	signingKey = C9836696571DA28F
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
@@ -14,7 +14,7 @@
 	grep = auto
 	diff = auto
 [core]
-	editor = nvim -c \"set fenc=utf-8\"
+	editor = vim -c \"set fenc=utf-8\"
 	excludesfile = /Users/e155730/.gitignore
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -46,4 +46,4 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg1
+	program = gpg

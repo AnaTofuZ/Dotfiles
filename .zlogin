@@ -14,26 +14,26 @@
   fi
 } &!# }}}
 
-# Execute code only if STDERR is bound to a TTY.
-[[ -o INTERACTIVE && -t 2 ]] && {
-
-  # Print a random, hopefully interesting, adage.
-  if (( $+commands[fortune] )); then
-    fortune -s
-    print
-  fi
-
-} >&2
-
+## Execute code only if STDERR is bound to a TTY.
+#[[ -o INTERACTIVE && -t 2 ]] && {
 #
-# Print a random, hopefully interesting, adage.# {{{
-if (( $+commands[fortune] )); then
-  if [[ -t 0 || -t 1 ]]; then
-    fortune -s
-    print
-  fi
-fi
-# }}}
+#  # Print a random, hopefully interesting, adage.
+#  if (( $+commands[fortune] )); then
+#    fortune -s
+#    print
+#  fi
+#
+#} >&2
+#
+##
+## Print a random, hopefully interesting, adage.# {{{
+#if (( $+commands[fortune] )); then
+#  if [[ -t 0 || -t 1 ]]; then
+#    fortune -s
+#    print
+#  fi
+#fi
+## }}}
 # Print messege {{{
 
 cat <<-EOF

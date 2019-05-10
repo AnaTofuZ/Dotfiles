@@ -7,20 +7,17 @@
 
 # 上書き禁止
 setopt noclobber
+bindkey -e
 
-# Source Prezto.{{{
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-# }}}
 # plenv {{{
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 # }}}
 # GOPATH {{{
-export GOPATH=$HOME/workspace/go
+export GOPATH=$HOME
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GO111MODULE=on
 #}}}
 # hub {{{
 function git(){hub "$@"}
@@ -33,6 +30,8 @@ alias man='env LANG=C man'
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 # }}}
 # rbenv {{{
+export RBENV_ROOT="$HOME/.rbenv"
+path=($HOME/.rbenv/bin $path)
 eval "$(rbenv init -)"
 # }}}
 # bundle {{{
@@ -109,6 +108,9 @@ eval "$(direnv hook zsh)"
 alias grau="git remote add upstream"
 alias gplu="git pull upstream master"
 alias gia="git add"
+alias gc="git commit --verbose"
+alias gp="git push"
+alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
 # }}}
 # weather{{{
 weather(){
@@ -132,13 +134,13 @@ alias brew="env PATH=${PATH/\/Users\/anatofuz\/\.pyenv\/shims:/} brew"
 # aws {{{
 #export PATH=/Users/anatofuz/.pyenv/versions/3.6.5/bin:$PATH
 # cf. https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-install-macos.html
-source /Users/anatofuz/.pyenv/versions/3.6.5/bin/aws_zsh_completer.sh
+#source /Users/anatofuz/.pyenv/versions/3.6.5/bin/aws_zsh_completer.sh
 # }}}
 # gitignore {{{
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 #}}}
 # screenshot-type {{{
-function screenshot-type () {
+screenshot-type () {
     if [ $# -ne 1 ]; then
         echo "require bmp,gif,jpg,pdf,png,tiff"
         return 1
@@ -146,21 +148,14 @@ function screenshot-type () {
         defaults write com.apple.screencapture type $1
     fi
 }
-function _screenshot-type {
-    _values 'type' 'jpg' 'png' 'pdf' 'bmp' 'gif' 'tiff'
-}
-compdef _screenshot-type screenshot-type
+
 # }}}
 # longman {{{
 function longman(){ open "https://www.ldoceonline.com/jp/search/?q=$*" }
 # }}}
-# 補完{{{
-autoload -U compinit
-compinit
-#}}}
 # google cloud sdk {{{
-source /Users/anatofuz/src/google-cloud-sdk/completion.zsh.inc
-source /Users/anatofuz/src/google-cloud-sdk/path.zsh.inc
+#source /Users/anatofuz/src/google-cloud-sdk/completion.zsh.inc
+#source /Users/anatofuz/src/google-cloud-sdk/path.zsh.inc
 # }}}
 # zplug {{{
 #source ~/.zplug/init.zsh
@@ -210,9 +205,7 @@ rmsandbox(){
 # ghq {{{
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
-# }}}
-# zsh-cmpletation{{{
-fpath=(/usr/local/share/zsh-completions $fpath)
+alias ghqdoc='godoc $(ghq list --full-path | peco) | $PAGER'
 # }}}
 # bat {{{
 export BAT_THEME="GitHub"
@@ -253,12 +246,20 @@ export PATH="$HOME/src/bin:$PATH"
 # }}}
 export PATH="/usr/local/opt/m4/bin:$PATH"
 #export PATH="/Users/anatofuz/.cabal/bin:$PATH"
+# ls alias {{{
 alias ls="ls -GF"
+alias sl="ls"
+alias la="ls -a"
+alias ll="ls -l"
+alias lal="ls -al"
+# }}}
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export blogdir="/Users/anatofuz/Documents/blog"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 
 # for nokogiri {{{
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
@@ -274,3 +275,41 @@ export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig"
 # perl6 zef path {{{
 export PATH="$(readlink $(where perl6) | perl -pne 's[\.\.][/usr/local]; s[(.*)/bin/perl6][$1/share/perl6/site/bin]'):$PATH"
 # }}}
+
+# history {{{
+# 履歴ファイルの保存先
+export HISTFILE=${HOME}/.zsh_history
+
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=100000
+
+# 重複を記録しない
+setopt hist_ignore_dups
+
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
+
+alias   h="fc -l -d -20"
+alias   history="fc -l -d -$HISTSIZE"
+# }}}
+#autoload -U promptinit; promptinit
+#prompt pure
+prompt='%S+%s%m%S+%s%n '
+
+
+# zsh syntax highlight {{{
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# }}}
+path=("$HOME/anaconda3/bin" $path)
+# grep color {{{
+export GREP_OPTIONS='--color=auto'
+# }}}
+
+export STUDENT_NUMBER_MASTER="k198584"
+
+# anatofuz-tools {{{
+path=("$HOME/src/firefly/hg/Members/anatofuz/anatofuz-tools" $path)
+#}}}
