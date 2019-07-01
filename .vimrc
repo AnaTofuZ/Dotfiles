@@ -15,6 +15,8 @@ if dein#load_state('/Users/anatofuz/.cache/dein')
   call dein#add('/Users/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('chriskempson/vim-tomorrow-theme')
+  call dein#add('zerowidth/vim-copy-as-rtf')
+  call dein#add('fatih/vim-go')
 
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
@@ -42,7 +44,7 @@ language ja_JP.UTF-8
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,iso-2022-jp,sjis
 set expandtab
-set sw=4 ts=4 
+set sw=2 sts=2 ts=2
 set softtabstop=4
 set nocompatible
 set backupcopy=yes
@@ -152,3 +154,13 @@ set backspace=indent,eol,start
 
 " end
 
+set noswapfile
+
+" cbc {{{
+autocmd BufNewFile,BufRead *.cbc set filetype=c
+" }}}
+
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END

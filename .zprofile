@@ -63,4 +63,20 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$HOME/.cargo/bin:$PATH"
+path=($HOME/.cargo/bin $path)
+
+# rust zsh completions {{{
+if hash rustup 2>/dev/null; then
+    rustup completions zsh > $HOME/src/zsh/completions/_rustup
+fi
+
+if hash rustc 2>/dev/null; then
+    fpath=($(rustc --print sysroot)/share/zsh/site-functions $fpath)
+fi
+# }}}
+
+# 補完{{{
+autoload -U compinit
+compinit
+#}}}

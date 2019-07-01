@@ -1,0 +1,2092 @@
+# この viminfo ファイルは Vim 8.1 によって生成されました.
+# 変更する際には十分注意してください!
+
+# Viminfo version
+|1,4
+
+# このファイルが書かれた時の 'encoding' の値
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 最後の 検索パターン:
+~MSle0~/HIST
+
+# 最後の Substitute 検索パターン:
+~MSle0&ie_rsa
+
+# 最後に置換された文字列:
+$
+
+# コマンドライン 項目の履歴 (新しいものから古いものへ):
+:wq!
+|2,0,1557472773,,"wq!"
+:q!
+|2,0,1557472700,,"q!"
+:Q!
+|2,0,1557472700,,"Q!"
+:q
+|2,0,1556529869,,"q"
+:w
+|2,0,1556529865,,"w"
+:!
+|2,0,1556528468,,"!"
+:0
+|2,0,1556519877,,"0"
+:q1
+|2,0,1556519228,,"q1"
+:call dein#clear_state()
+|2,0,1556519225,,"call dein#clear_state()"
+:set background=prune
+|2,0,1556518534,,"set background=prune"
+:set background=white
+|2,0,1556518530,,"set background=white"
+:set background
+|2,0,1556518524,,"set background"
+:h color
+|2,0,1556518483,,"h color"
+:set background=dark
+|2,0,1556518424,,"set background=dark"
+:call dein#install()
+|2,0,1556518359,,"call dein#install()"
+:colorschemes
+|2,0,1556518227,,"colorschemes"
+:colorscheme --list
+|2,0,1556518222,,"colorscheme --list"
+:colorscheme Tomorrow
+|2,0,1556518209,,"colorscheme Tomorrow"
+:colorscheme Tomorrow-Night
+|2,0,1556518174,,"colorscheme Tomorrow-Night"
+:colorscheme Tomorrow-Night-Blue
+|2,0,1556518171,,"colorscheme Tomorrow-Night-Blue"
+:color
+|2,0,1556518146,,"color"
+:.,.+5d
+|2,0,1556255045,,".,.+5d"
+:'<,'>q!
+|2,0,1556255025,,"'<,'>q!"
+:Q
+|2,0,1556255019,,"Q"
+:dein#install
+|2,0,1556187448,,"dein#install"
+:#dein Install
+|2,0,1556187444,,"#dein Install"
+:colorscheme Tomorrow
+|2,0,1556187361,,"colorscheme Tomorrow"
+:50
+|2,0,1556102283,,"50"
+:26
+|2,0,1556102115,,"26"
+:.,.+1!:q
+|2,0,1556100835,,".,.+1!:q"
+:set no tabline
+|2,0,1556089800,,"set no tabline"
+:set no expandtab
+|2,0,1556089788,,"set no expandtab"
+:set nonu
+|2,0,1556089775,,"set nonu"
+:set number
+|2,0,1556089767,,"set number"
+:no
+|2,0,1556089756,,"no"
+:nonumber
+|2,0,1556089751,,"nonumber"
+:w! tmp
+|2,0,1556073290,,"w! tmp"
+:w! p6ython.p6
+|2,0,1556020793,,"w! p6ython.p6"
+:ww
+|2,0,1556011831,,"ww"
+:266
+|2,0,1555993011,,"266"
+::call dein#install()
+|2,0,1555992977,,":call dein#install()"
+:fuck
+|2,0,1555987300,,"fuck"
+:vim
+|2,0,1555987295,,"vim"
+:smile
+|2,0,1555987237,,"smile"
+:254
+|2,0,1555799090,,"254"
+:638
+|2,0,1555719605,,"638"
+:W
+|2,0,1555718919,,"W"
+:w!
+|2,0,1555716499,,"w!"
+:!./fig/
+|2,0,1555669106,,"!./fig/"
+:wq
+|2,0,1555666295,,"wq"
+
+# 検索文字列 項目の履歴 (新しいものから古いものへ):
+?/HIST
+|2,1,1557472760,47,"HIST"
+?/path
+|2,1,1557472298,47,"path"
+?/html
+|2,1,1556528526,47,"html"
+?/graph
+|2,1,1556528419,47,"graph"
+?/request
+|2,1,1556528387,47,"request"
+?/decode
+|2,1,1556528341,47,"decode"
+? @$
+|2,1,1556519205,,"@$"
+?/back
+|2,1,1556518505,47,"back"
+?/color
+|2,1,1556518494,47,"color"
+?/set background=dark
+|2,1,1556518411,47,"set background=dark"
+?/clorscheme
+|2,1,1556518156,47,"clorscheme"
+?/htmk
+|2,1,1556437740,47,"htmk"
+?/id
+|2,1,1556437045,47,"id"
+?/URI
+|2,1,1556435716,47,"URI"
+?/clor
+|2,1,1556434660,47,"clor"
+?/sl
+|2,1,1556345873,47,"sl"
+?/cargo
+|2,1,1556189251,47,"cargo"
+?/dalmore
+|2,1,1556185348,47,"dalmore"
+?/expand
+|2,1,1556148839,47,"expand"
+?/p
+|2,1,1556125405,47,"p"
+?/window
+|2,1,1556089722,47,"window"
+?/windows
+|2,1,1556089679,47,"windows"
+?/winlinks
+|2,1,1556089647,47,"winlinks"
+?/main
+|2,1,1556088878,47,"main"
+?/pane_curr
+|2,1,1556087761,47,"pane_curr"
+?/prefix
+|2,1,1556073797,47,"prefix"
+?/prefixx
+|2,1,1556073795,47,"prefixx"
+?/exec_prefix
+|2,1,1556073793,47,"exec_prefix"
+?/MVM_
+|2,1,1556013185,47,"MVM_"
+?/unless_i
+|2,1,1556011619,47,"unless_i"
+?/fpath
+|2,1,1556009513,47,"fpath"
+?/activ
+|2,1,1556005536,47,"activ"
+?/compdef
+|2,1,1556003124,47,"compdef"
+?/screen
+|2,1,1556002658,47,"screen"
+?/align
+|2,1,1555993220,47,"align"
+?/easy-align
+|2,1,1555993216,47,"easy-align"
+? \<fooo\>
+|2,1,1555993076,,"\\<fooo\\>"
+? "
+|2,1,1555993065,,"\""
+?/man
+|2,1,1555928762,47,"man"
+?/gc
+|2,1,1555913396,47,"gc"
+?/git
+|2,1,1555913370,47,"git"
+?/hoge
+|2,1,1555913186,47,"hoge"
+?/gia
+|2,1,1555913170,47,"gia"
+?/go
+|2,1,1555911913,47,"go"
+?/ghq
+|2,1,1555911814,47,"ghq"
+?/GOPATH
+|2,1,1555911491,47,"GOPATH"
+?/GOPA
+|2,1,1555911017,47,"GOPA"
+??\a
+|2,1,1555901626,63,"\\a"
+?/la
+|2,1,1555751548,47,"la"
+?/ls
+|2,1,1555751547,47,"ls"
+
+# 式 項目の履歴 (新しいものから古いものへ):
+
+# 入力行 項目の履歴 (新しいものから古いものへ):
+
+# デバッグ行 項目の履歴 (新しいものから古いものへ):
+
+# レジスタ:
+"0	LINE	0
+	### ピヨグラミングとは?
+|3,0,0,1,1,0,1556519664,"### ピヨグラミングとは?"
+""1	LINE	0
+	
+|3,1,1,1,1,0,1557472771,""
+"2	LINE	0
+	# history {{{
+	#}}}
+|3,0,2,1,2,0,1557472770,"# history {{{","#}}}"
+"3	LINE	0
+	alias   h="fc -l -d -20"
+	alias   history="fc -l -d -$HISTSIZE"
+|3,0,3,1,2,0,1557472765,"alias   h=\"fc -l -d -20\"","alias   history=\"fc -l -d -$HISTSIZE\""
+"4	LINE	0
+	use
+|3,0,4,1,1,0,1556529864,"use"
+"5	LINE	0
+	
+|3,0,5,1,1,0,1556528950,""
+"6	LINE	0
+	0.02 2019-04-29T09:08:18Z
+|3,0,6,1,1,0,1556528949,"0.02 2019-04-29T09:08:18Z"
+"7	LINE	0
+	=head4 C<< $pixela->graph->html() >>
+	
+	Displays the details of the graph in html format.
+	(This method return html urls)
+	
+	See Also L<https://docs.pixe.la/#/get-graph-html>
+	
+|3,0,7,1,7,0,1556528548,"=head4 C<< $pixela->graph->html() >>","","Displays the details of the graph in html format.","(This method return html urls)","","See Also L<https://docs.pixe.la/#/get-graph-html>",""
+"8	LINE	0
+	
+|3,0,8,1,1,0,1556519564,""
+"9	LINE	0
+	## アイスブレイ
+|3,0,9,1,1,0,1556519536,"## アイスブレイ"
+"-	CHAR	0
+	#
+|3,0,36,0,1,0,1557472754,"#"
+
+# ファイルマーク:
+'0  313  0  ~/.zshrc
+|4,48,313,0,1557472773,"~/.zshrc"
+'1  1  0  ~/.zshrc
+|4,49,1,0,1557472700,"~/.zshrc"
+'2  1  0  ~/.zshrc
+|4,50,1,0,1557472700,"~/.zshrc"
+'3  314  11  ~/.zshrc
+|4,51,314,11,1557472342,"~/.zshrc"
+'4  314  11  ~/.zshrc
+|4,52,314,11,1557472342,"~/.zshrc"
+'5  311  11  ~/.zshrc
+|4,53,311,11,1557472342,"~/.zshrc"
+'6  311  11  ~/.zshrc
+|4,54,311,11,1557472342,"~/.zshrc"
+'7  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,55,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+'8  304  1  ~/.zshrc
+|4,56,304,1,1556529552,"~/.zshrc"
+'9  304  1  ~/.zshrc
+|4,57,304,1,1556529552,"~/.zshrc"
+
+# ジャンプリスト (新しいものが先):
+-'  313  0  ~/.zshrc
+|4,39,313,0,1557472773,"~/.zshrc"
+-'  316  28  ~/.zshrc
+|4,39,316,28,1557472761,"~/.zshrc"
+-'  300  0  ~/.zshrc
+|4,39,300,0,1557472760,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1557472743,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1557472700,"~/.zshrc"
+-'  314  11  ~/.zshrc
+|4,39,314,11,1557472342,"~/.zshrc"
+-'  311  11  ~/.zshrc
+|4,39,311,11,1557472342,"~/.zshrc"
+-'  311  11  ~/.zshrc
+|4,39,311,11,1557472342,"~/.zshrc"
+-'  34  0  ~/.zshrc
+|4,39,34,0,1557472302,"~/.zshrc"
+-'  34  0  ~/.zshrc
+|4,39,34,0,1557472302,"~/.zshrc"
+-'  34  0  ~/.zshrc
+|4,39,34,0,1557472302,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1557472298,"~/.zshrc"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  6  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,6,0,1556529869,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  1  0  ~/src/bin/anatofuz-tools/create_ln.pl
+|4,39,1,0,1556529847,"~/src/bin/anatofuz-tools/create_ln.pl"
+-'  304  1  ~/.zshrc
+|4,39,304,1,1556529552,"~/.zshrc"
+-'  301  1  ~/.zshrc
+|4,39,301,1,1556529552,"~/.zshrc"
+-'  301  1  ~/.zshrc
+|4,39,301,1,1556529552,"~/.zshrc"
+-'  301  1  ~/.zshrc
+|4,39,301,1,1556529552,"~/.zshrc"
+-'  301  1  ~/.zshrc
+|4,39,301,1,1556529552,"~/.zshrc"
+-'  301  1  ~/.zshrc
+|4,39,301,1,1556529552,"~/.zshrc"
+-'  301  1  ~/.zshrc
+|4,39,301,1,1556529552,"~/.zshrc"
+-'  307  2  ~/.zshrc
+|4,39,307,2,1556529548,"~/.zshrc"
+-'  304  2  ~/.zshrc
+|4,39,304,2,1556529548,"~/.zshrc"
+-'  304  2  ~/.zshrc
+|4,39,304,2,1556529548,"~/.zshrc"
+-'  304  2  ~/.zshrc
+|4,39,304,2,1556529548,"~/.zshrc"
+-'  304  2  ~/.zshrc
+|4,39,304,2,1556529548,"~/.zshrc"
+-'  304  2  ~/.zshrc
+|4,39,304,2,1556529548,"~/.zshrc"
+-'  304  2  ~/.zshrc
+|4,39,304,2,1556529548,"~/.zshrc"
+-'  72  0  ~/.zshrc
+|4,39,72,0,1556529544,"~/.zshrc"
+-'  72  0  ~/.zshrc
+|4,39,72,0,1556529544,"~/.zshrc"
+-'  72  0  ~/.zshrc
+|4,39,72,0,1556529544,"~/.zshrc"
+-'  72  0  ~/.zshrc
+|4,39,72,0,1556529544,"~/.zshrc"
+-'  72  0  ~/.zshrc
+|4,39,72,0,1556529544,"~/.zshrc"
+-'  72  0  ~/.zshrc
+|4,39,72,0,1556529544,"~/.zshrc"
+-'  72  0  ~/.zshrc
+|4,39,72,0,1556529544,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1556529543,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1556529543,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1556529543,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1556529543,"~/.zshrc"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+-'  324  0  ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+|4,39,324,0,1556529233,"~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm"
+
+# ファイル内マークの履歴 (新しいものから古いもの):
+
+> ~/.zshrc
+	*	1557472771	0
+	"	313	0
+	^	294	0
+	.	316	0
+	+	3	0
+	+	7	0
+	+	10	9
+	+	210	0
+	+	301	0
+	+	297	0
+	+	280	32
+	+	293	22
+	+	156	0
+	+	137	0
+	+	158	0
+	+	33	31
+	+	35	0
+	+	34	27
+	+	210	0
+	+	210	26
+	+	210	0
+	+	210	39
+	+	210	13
+	+	57	0
+	+	210	0
+	+	301	10
+	+	298	34
+	+	301	0
+	+	9	0
+	+	304	0
+	+	303	25
+	+	306	0
+	+	305	4
+	+	262	49
+	+	261	0
+	+	301	0
+	+	252	14
+	+	253	14
+	+	254	16
+	+	249	13
+	+	255	2
+	+	253	0
+	+	251	12
+	+	255	1
+	+	18	42
+	+	18	0
+	+	17	18
+	+	208	59
+	+	20	13
+	+	111	29
+	+	112	18
+	+	113	122
+	+	113	0
+	+	114	0
+	+	11	11
+	+	11	0
+	+	152	39
+	+	152	0
+	+	143	18
+	+	11	0
+	+	152	0
+	+	152	23
+	+	152	0
+	+	306	25
+	+	309	0
+	+	308	0
+	+	307	0
+	+	307	15
+	+	310	0
+	+	309	4
+	+	306	32
+	+	307	0
+	+	298	0
+	+	301	0
+	+	178	0
+	+	301	0
+	+	298	0
+	+	301	0
+	+	299	0
+	+	311	37
+	+	251	0
+	+	307	0
+	+	315	0
+	+	314	69
+	+	314	11
+	+	316	36
+	+	316	12
+	+	316	2
+	+	316	0
+	+	295	0
+	+	294	0
+	+	316	0
+
+> ~/src/bin/anatofuz-tools/create_ln.pl
+	*	1556529865	0
+	"	6	0
+	.	6	0
+	+	5	14
+	+	6	0
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Graph.pm
+	*	1556529232	0
+	"	324	0
+	^	340	44
+	.	340	43
+	+	168	0
+	+	159	25
+	+	160	0
+	+	161	0
+	+	168	0
+	+	163	0
+	+	168	0
+	+	167	10
+	+	166	69
+	+	368	0
+	+	367	0
+	+	368	35
+	+	371	0
+	+	386	0
+	+	376	0
+	+	386	0
+	+	383	0
+	+	384	52
+	+	385	0
+	+	126	18
+	+	130	25
+	+	140	0
+	+	140	4
+	+	133	14
+	+	140	0
+	+	137	0
+	+	136	29
+	+	139	16
+	+	6	7
+	+	130	11
+	+	6	0
+	+	130	0
+	+	133	4
+	+	135	0
+	+	134	0
+	+	133	4
+	+	134	0
+	+	323	36
+	+	327	0
+	+	328	0
+	+	338	12
+	+	332	0
+	+	338	0
+	+	337	0
+	+	338	24
+	+	344	0
+	+	340	43
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/Changes
+	*	1556528950	0
+	"	4	4
+	.	4	0
+	+	4	27
+	+	4	0
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/.git/MERGE_MSG
+	*	1556528926	0
+	"	4	0
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/.git/info/exclude
+	*	1556528881	0
+	"	7	16
+	^	7	17
+	.	7	16
+	+	7	16
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/.git/COMMIT_EDITMSG
+	*	1556528597	0
+	"	1	5
+	^	1	6
+	.	1	5
+	+	1	5
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela.pm
+	*	1556528550	0
+	"	431	0
+	^	432	0
+	.	431	5
+	+	66	0
+	+	454	40
+	+	471	0
+	+	433	0
+	+	431	5
+
+> ~/src/github.com/perl-entrance-org/workshop-piyoguraming/1st/slide.md
+	*	1556520187	0
+	"	39	0
+	^	39	195
+	.	39	194
+	+	1	31
+	+	2	0
+	+	3	9
+	+	7	77
+	+	9	18
+	+	11	29
+	+	10	20
+	+	14	9
+	+	15	23
+	+	16	14
+	+	17	0
+	+	18	24
+	+	18	0
+	+	10	21
+	+	20	29
+	+	22	0
+	+	23	0
+	+	22	0
+	+	27	117
+	+	28	54
+	+	29	0
+	+	31	0
+	+	33	67
+	+	34	77
+	+	35	154
+	+	36	0
+	+	38	47
+	+	39	194
+
+> ~/src/github.com/perl-entrance-org/workshop-piyoguraming/.git/COMMIT_EDITMSG
+	*	1556519882	0
+	"	2	15
+	^	1	17
+	.	1	15
+	+	1	8
+	+	3	31
+	+	1	15
+
+> ~/.vimrc
+	*	1556519022	0
+	"	20	0
+	^	52	20
+	.	22	0
+	+	42	0
+	+	92	0
+	+	153	0
+	+	272	0
+	+	273	0
+	+	274	0
+	+	272	0
+	+	307	0
+	+	308	0
+	+	309	0
+	+	316	0
+	+	317	0
+	+	318	0
+	+	319	0
+	+	227	0
+	+	228	0
+	+	311	0
+	+	312	0
+	+	313	0
+	+	41	0
+	+	42	0
+	+	43	0
+	+	46	0
+	+	49	0
+	+	52	0
+	+	57	0
+	+	76	0
+	+	77	0
+	+	78	0
+	+	81	0
+	+	82	0
+	+	83	0
+	+	85	0
+	+	86	0
+	+	87	0
+	+	65	1
+	+	262	0
+	+	264	0
+	+	42	0
+	+	65	0
+	+	77	0
+	+	263	0
+	+	41	0
+	+	42	0
+	+	43	0
+	+	46	0
+	+	49	0
+	+	52	0
+	+	57	0
+	+	76	0
+	+	77	0
+	+	81	0
+	+	82	0
+	+	65	0
+	+	78	0
+	+	85	0
+	+	86	0
+	+	87	0
+	+	65	2
+	+	262	0
+	+	264	0
+	+	67	0
+	+	72	0
+	+	128	0
+	+	37	42
+	+	16	40
+	+	137	0
+	+	144	4
+	+	138	0
+	+	143	24
+	+	138	7
+	+	145	21
+	+	146	16
+	+	151	0
+	+	1	46
+	+	37	42
+	+	148	36
+	+	154	0
+	+	151	30
+	+	45	12
+	+	46	0
+	+	44	0
+	+	22	49
+	+	52	19
+	+	17	49
+	+	18	50
+	+	52	20
+	+	39	0
+	+	52	19
+	+	57	13
+	+	53	0
+	+	51	50
+	+	52	19
+	+	18	0
+	+	22	0
+
+> ~/src/MoarVM/src/core/interp.c
+	*	1556518634	0
+	"	221	12
+	^	75	20
+	.	75	19
+	+	75	19
+
+> /usr/local/Cellar/vim/8.1.1200/share/vim/vim81/doc/syntax.txt
+	*	1556518490	0
+	"	113	0
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/User.pm
+	*	1556518129	0
+	"	26	8
+
+> ~/src/github.com/anatofuz/Dotfiles/.vimrc
+	*	1556517838	0
+	"	118	0
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/t/03_graph.t
+	*	1556438074	0
+	"	247	1
+	^	246	91
+	.	246	90
+	+	301	0
+	+	325	0
+	+	301	13
+	+	303	24
+	+	324	0
+	+	316	58
+	+	315	0
+	+	321	0
+	+	324	0
+	+	322	34
+	+	318	20
+	+	324	0
+	+	315	0
+	+	318	24
+	+	317	0
+	+	306	21
+	+	240	0
+	+	239	32
+	+	240	24
+	+	244	26
+	+	243	0
+	+	242	0
+	+	243	19
+	+	247	0
+	+	246	0
+	+	247	0
+	+	246	90
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Pixel.pm
+	*	1556436328	0
+	"	1	0
+
+> ~/src/github.com/anatofuz/p5-WebService-Pixela/lib/WebService/Pixela/Webhook.pm
+	*	1556435731	0
+	"	70	0
+
+> ~/src/github.com/perl-entrance-org/workshop-piyoguraming/1st/hoge.pl
+	*	1556435249	0
+	"	1	0
+	^	2	22
+	.	2	21
+	+	2	21
+	+	3	6
+	+	2	21
+
+> ~/src/github.com/perl-entrance-org/workshop-piyoguraming/README.md
+	*	1556433277	0
+	"	5	0
+	.	10	0
+	+	2	0
+	+	4	0
+	+	5	23
+	+	6	0
+	+	8	0
+	+	9	62
+	+	10	0
+
+> ~/src/github.com/perl-entrance-org/workshop-piyoguraming/.gitignore
+	*	1556432242	0
+	"	75	0
+
+> ~/Documents/wantedly
+	*	1556360857	0
+	"	10	2
+
+> ~/workspace/rust/TRPL/communicator/unko.pl
+	*	1556267578	0
+	"	10	4
+	^	9	24
+	.	9	23
+	+	1	19
+	+	4	0
+	+	2	4
+	+	5	0
+	+	5	16
+	+	5	43
+	+	11	0
+	+	10	0
+	+	5	0
+	+	9	23
+
+> ~/workspace/rust/TRPL/communicator/src/lib.rs
+	*	1556259625	0
+	"	12	4
+	^	8	0
+	.	8	0
+	+	4	0
+	+	4	4
+	+	4	0
+	+	3	11
+	+	1	3
+	+	3	3
+	+	12	0
+	+	11	25
+	+	8	0
+
+> ~/workspace/rust/TRPL/importing_names/src/main.rs
+	*	1556259263	0
+	"	29	0
+	^	28	22
+	.	28	0
+	+	8	0
+	+	3	18
+	+	2	7
+	+	3	20
+	+	7	0
+	+	6	0
+	+	5	37
+	+	14	0
+	+	13	35
+	+	10	17
+	+	13	4
+	+	1	1
+	+	21	0
+	+	20	9
+	+	29	0
+	+	28	21
+	+	28	0
+
+> ~/workspace/rust/TRPL/outermostr/src/lib.rs
+	*	1556258738	0
+	"	14	0
+	^	12	15
+	.	13	12
+	+	1	14
+	+	7	0
+	+	2	30
+	+	7	0
+	+	7	4
+	+	7	30
+	+	14	0
+	+	13	40
+	+	4	7
+	+	6	7
+	+	7	11
+	+	12	4
+	+	6	4
+	+	7	0
+	+	6	18
+	+	12	14
+	+	13	12
+
+> ~/workspace/rust/TRPL/outermostr/src/outermost/inside.rs
+	*	1556258717	0
+	"	3	0
+	^	3	4
+	.	1	0
+	+	3	30
+	+	1	0
+	+	3	3
+	+	1	0
+
+> ~/workspace/rust/TRPL/outermostr/src/outermost.r
+	*	1556258677	0
+	"	1	0
+
+> ~/workspace/rust/TRPL/communicator/src/network/mod.rs
+	*	1556258011	0
+	"	4	3
+	^	4	4
+	.	4	3
+	+	1	3
+	+	4	3
+
+> ~/workspace/rust/TRPL/communicator/src/network/server.rs
+	*	1556257976	0
+	"	1	3
+	^	1	4
+	.	1	3
+	+	1	3
+
+> ~/workspace/rust/TRPL/communicator/src/client.rs
+	*	1556257910	0
+	"	2	0
+	^	1	4
+	.	1	3
+	+	2	0
+	+	1	3
+
+> ~/workspace/rust/TRPL/communicator/src/main.rs
+	*	1556257815	0
+	"	5	0
+	^	4	36
+	.	4	35
+	+	5	0
+	+	4	35
+
+> ~/workspace/rust/TRPL/communicator/src/network/mode.rs
+	*	1556257115	0
+	"	1	0
+
+> ~/workspace/rust/TRPL/communicator/src/server.rs
+	*	1556255104	0
+	"	2	0
+	^	2	1
+	.	2	0
+	+	2	0
+
+> ~/workspace/rust/TRPL/communicator/src/network.rs
+	*	1556255094	0
+	"	4	10
+	^	4	11
+	.	4	10
+	+	5	0
+	+	4	10
+
+> ~/workspace/rust/TRPL/defing_enum/src/main.rs
+	*	1556254435	0
+	"	13	0
+	.	11	0
+	+	16	0
+	+	23	0
+	+	16	6
+	+	28	0
+	+	28	29
+	+	40	0
+	+	21	0
+	+	21	19
+	+	22	0
+	+	23	0
+	+	16	4
+	+	21	0
+	+	21	14
+	+	28	0
+	+	25	52
+	+	26	45
+	+	27	0
+	+	16	9
+	+	21	0
+	+	20	11
+	+	37	0
+	+	31	16
+	+	36	0
+	+	32	26
+	+	36	0
+	+	37	0
+	+	34	18
+	+	35	21
+	+	34	23
+	+	35	0
+	+	34	0
+	+	15	1
+	+	38	2
+	+	40	0
+	+	41	0
+	+	13	0
+	+	6	0
+	+	5	0
+	+	4	30
+	+	4	0
+	+	12	0
+	+	10	30
+	+	11	29
+	+	11	0
+
+> ~/src/www.cr.ie.u-ryukyu.ac.jp/hg/Applications/14x14ja/readme-j.txt
+	*	1556244919	0
+	"	23	0
+
+> ~/src/hg/OSC2019/usestrict.pl
+	*	1556244898	0
+	"	1	1
+	^	1	2
+	.	1	2
+	+	1	2
+
+> ~/src/hg/OSC2019/slide.md
+	*	1556244887	0
+	"	41	6
+	^	170	27
+	.	170	26
+	+	590	0
+	+	585	0
+	+	589	2
+	+	600	0
+	+	584	0
+	+	588	0
+	+	585	62
+	+	600	0
+	+	597	0
+	+	596	0
+	+	600	0
+	+	587	49
+	+	600	0
+	+	588	0
+	+	600	0
+	+	583	0
+	+	601	0
+	+	602	0
+	+	607	3
+	+	637	2
+	+	637	26
+	+	637	0
+	+	604	62
+	+	606	0
+	+	605	79
+	+	582	0
+	+	565	36
+	+	580	0
+	+	561	0
+	+	559	27
+	+	564	2
+	+	580	2
+	+	581	0
+	+	560	0
+	+	563	0
+	+	561	80
+	+	562	8
+	+	562	0
+	+	639	32
+	+	647	2
+	+	657	2
+	+	656	10
+	+	648	0
+	+	646	0
+	+	641	42
+	+	642	81
+	+	643	54
+	+	645	0
+	+	585	26
+	+	587	0
+	+	585	68
+	+	586	58
+	+	659	0
+	+	658	0
+	+	667	0
+	+	667	109
+	+	678	0
+	+	679	0
+	+	667	0
+	+	644	0
+	+	667	0
+	+	661	67
+	+	666	0
+	+	679	0
+	+	686	0
+	+	680	0
+	+	686	0
+	+	681	52
+	+	682	25
+	+	662	28
+	+	663	9
+	+	664	31
+	+	665	9
+	+	685	0
+	+	684	22
+	+	683	92
+	+	685	51
+	+	699	30
+	+	700	0
+	+	703	96
+	+	704	75
+	+	706	3
+	+	719	2
+	+	705	0
+	+	707	27
+	+	718	30
+	+	707	0
+	+	702	30
+	+	720	0
+	+	726	12
+	+	727	40
+	+	729	60
+	+	30	50
+	+	451	4
+	+	453	3
+	+	453	85
+	+	725	0
+	+	723	111
+	+	724	61
+	+	170	26
+
+> ~/Downloads/libRedRT-
+	*	1556197165	0
+	"	1	0
+
+> ~/Downloads/hello.red
+	*	1556196871	0
+	"	1	0
+	^	3	24
+	.	1	0
+	+	3	23
+	+	1	0
+
+> ~/.zsh_history
+	*	1556189258	0
+	"	1679	15
+
+> ~/workspace/rust/TRPL/rectangles/src/main.rs
+	*	1556188826	0
+	"	51	0
+	^	48	46
+	.	48	45
+	+	10	0
+	+	4	20
+	+	9	0
+	+	8	28
+	+	14	0
+	+	13	17
+	+	1	1
+	+	15	1
+	+	31	0
+	+	21	12
+	+	22	0
+	+	24	0
+	+	23	17
+	+	30	0
+	+	27	0
+	+	31	0
+	+	25	0
+	+	26	0
+	+	27	28
+	+	29	0
+	+	28	30
+	+	17	1
+	+	30	1
+	+	36	0
+	+	35	15
+	+	52	12
+	+	60	0
+	+	59	0
+	+	60	13
+	+	65	0
+	+	64	37
+	+	31	0
+	+	64	31
+	+	62	1
+	+	66	1
+	+	60	0
+	+	59	25
+	+	32	16
+	+	33	0
+	+	59	25
+	+	50	0
+	+	41	0
+	+	40	31
+	+	59	39
+	+	54	0
+	+	53	0
+	+	54	0
+	+	55	0
+	+	54	36
+	+	55	48
+	+	54	47
+	+	58	0
+	+	57	0
+	+	58	37
+	+	59	0
+	+	58	54
+	+	59	0
+	+	45	0
+	+	44	61
+	+	49	0
+	+	48	45
+
+> ~/.ssh/config
+	*	1556185356	0
+	"	69	4
+	^	68	16
+	.	68	15
+	+	5	15
+	+	7	9
+	+	9	12
+	+	9	0
+	+	96	22
+	+	9	0
+	+	12	29
+	+	13	18
+	+	30	0
+	+	91	0
+	+	85	0
+	+	98	27
+	+	98	0
+	+	97	0
+	+	98	4
+	+	97	0
+	+	98	5
+	+	99	0
+	+	68	15
+
+> ~/workspace/event/ginowan/8_spring_programming_language/tyny_python_vm.pl
+	*	1556184784	0
+	"	63	0
+	^	33	34
+	.	33	33
+	+	4	7
+	+	57	0
+	+	56	0
+	+	33	0
+	+	27	39
+	+	32	15
+	+	33	14
+	+	34	14
+	+	33	0
+	+	34	0
+	+	35	10
+	+	28	49
+	+	31	0
+	+	29	0
+	+	29	51
+	+	30	26
+	+	4	0
+	+	33	33
+
+> ~/unko
+	*	1556148857	0
+	"	1	2
+	^	1	3
+	.	1	3
+	+	2	11
+	+	1	3
+
+> ~/workspace/event/ginowan/8_spring_programming_language/.git/COMMIT_EDITMSG
+	*	1556125402	0
+	"	1	12
+	^	1	13
+	.	1	12
+	+	1	12
+
+> ~/workspace/event/ginowan/8_spring_programming_language/python_vm.py
+	*	1556106102	0
+	"	10	0
+	^	8	0
+	.	3	0
+	+	5	0
+	+	3	10
+	+	7	13
+	+	6	12
+	+	3	0
+	+	9	0
+	+	8	0
+	+	3	0
+
+> ~/workspace/event/ginowan/8_spring_programming_language/test.c
+	*	1556105503	0
+	"	13	0
+	^	5	16
+	.	5	15
+	+	13	0
+	+	9	12
+	+	11	0
+	+	8	23
+	+	10	0
+	+	12	12
+	+	5	15
+
+> ~/workspace/event/ginowan/8_spring_programming_language/total.pl
+	*	1556105317	0
+	"	24	8
+	^	12	34
+	.	12	33
+	+	3	6
+	+	18	0
+	+	8	54
+	+	17	0
+	+	17	20
+	+	8	54
+	+	17	0
+	+	5	6
+	+	17	16
+	+	8	45
+	+	17	0
+	+	9	35
+	+	17	0
+	+	15	0
+	+	13	39
+	+	15	0
+	+	16	35
+	+	57	0
+	+	57	10
+	+	23	12
+	+	57	0
+	+	9	0
+	+	57	0
+	+	34	0
+	+	33	0
+	+	30	7
+	+	20	14
+	+	30	32
+	+	32	11
+	+	30	0
+	+	26	14
+	+	30	0
+	+	31	0
+	+	27	0
+	+	26	32
+	+	28	22
+	+	28	27
+	+	28	11
+	+	27	11
+	+	41	0
+	+	39	37
+	+	40	12
+	+	46	0
+	+	44	0
+	+	21	19
+	+	44	46
+	+	56	0
+	+	54	0
+	+	54	27
+	+	45	12
+	+	55	12
+	+	27	21
+	+	28	0
+	+	6	16
+	+	22	18
+	+	6	0
+	+	12	28
+	+	14	0
+	+	13	0
+	+	12	32
+	+	13	41
+	+	22	0
+	+	31	0
+	+	32	0
+	+	4	7
+	+	22	0
+	+	32	0
+	+	25	0
+	+	29	15
+	+	31	0
+	+	32	0
+	+	22	6
+	+	12	30
+	+	12	35
+	+	22	0
+	+	54	0
+	+	49	0
+	+	38	32
+	+	39	24
+	+	49	16
+	+	54	0
+	+	53	0
+	+	49	0
+	+	32	0
+	+	36	16
+	+	53	12
+	+	36	0
+	+	22	0
+	+	8	42
+	+	53	17
+	+	4	0
+	+	12	33
+
+> ~/workspace/event/ginowan/8_spring_programming_language/test.s
+	*	1556100839	0
+	"	1	1
+	.	1	0
+	+	1	0
+
+> ~/workspace/event/ginowan/8_spring_programming_language/python_vm_byte.py
+	*	1556093780	0
+	"	7	6
+	^	7	7
+	.	7	6
+	+	2	0
+	+	7	0
+	+	2	0
+	+	1	0
+	+	7	0
+	+	7	6
+
+> ~/workspace/cr/slides-control/slides/2019/04/24/memo.txt
+	*	1556093724	0
+	"	4	32
+	^	4	35
+	.	4	32
+	+	1	75
+	+	2	0
+	+	1	1
+	+	2	32
+	+	3	23
+	+	4	32
+
+> ~/installer.sh
+	*	1556090980	0
+	"	41	0
+
+> ~/src/github.com/tmux/tmux/window.c
+	*	1556090632	0
+	"	346	2
+
+> ~/src/github.com/tmux/tmux/tmux.h
+	*	1556089912	0
+	"	907	11
+
+> ~/src/github.com/tmux/tmux/compat.h
+	*	1556089671	0
+	"	1	0
+
+> ~/src/github.com/tmux/tmux/window.h
+	*	1556089591	0
+	"	1	0
+
+> ~/src/github.com/tmux/tmux/tmux.c
+	*	1556088986	0
+	"	337	2
+
+> ~/src/github.com/tmux/tmux/tty.c
+	*	1556088257	0
+	"	97	0
+
+> ~/.tmux.conf
+	*	1556087924	0
+	"	12	0
+	.	10	0
+	+	15	0
+	+	14	0
+	+	11	0
+	+	10	0
+
+> ~/.tmu
+	*	1556087877	0
+	"	1	0
+
+> ~/tmux.conf
+	*	1556087489	0
+	"	28	0
+	^	27	1
+	.	28	0
+	+	28	0
+
+> ~/workspace/cr/fedora_kernel_build/old.config
+	*	1556084792	0
+	"	8159	0
+
+> ~/workspace/cr/fedora_kernel_build/main.yml
+	*	1556084786	0
+	"	64	0
+
+> ~/src/github.com/tmux/tmux/tty-keys.c
+	*	1556084705	0
+	"	719	1
+	^	781	2
+	.	719	0
+	+	721	0
+	+	719	0
+
+> ~/src/hg/note/TR_W/Advanced software.mm
+	*	1556082895	0
+	"	52	0
+
+> ~/src/hg/note/TR_W/4_24.md
+	*	1556082101	0
+	"	23	0
+	^	38	4
+	.	38	0
+	+	10	11
+	+	13	11
+	+	15	13
+	+	16	15
+	+	17	10
+	+	20	8
+	+	22	15
+	+	24	6
+	+	23	0
+	+	26	9
+	+	27	10
+	+	29	0
+	+	29	8
+	+	30	9
+	+	31	7
+	+	34	8
+	+	35	0
+	+	32	15
+	+	34	0
+	+	36	8
+	+	37	9
+	+	38	0
+
+> ~/src/hg/note/TR_W/.vimrc
+	*	1556079890	0
+	"	1	0
+
+> ~/src/github.com/tmux/tmux/Makefile
+	*	1556073800	0
+	"	501	17
+
+> ~/src/github.com/tmux/tmux/Makefile.am
+	*	1556072879	0
+	"	19	0
+	^	18	75
+	.	18	0
+	+	18	74
+	+	17	0
+	+	18	0
+
+> ~/workspace/cr/Perl6/MoarVM/src/core/interp.c
+	*	1556013194	0
+	"	293	38
+
+> ~/workspace/cr/Perl6/MoarVM/src/core/oplabels.h
+	*	1556013171	0
+	"	1607	4
+
+> ~/workspace/cr/slides-control/slides/2019/04/23/memo.txt
+	*	1556013003	0
+	"	20	0
+	^	20	0
+	.	19	0
+	+	1	7
+	+	5	85
+	+	1	5
+	+	6	60
+	+	7	22
+	+	11	103
+	+	11	0
+	+	10	29
+	+	11	0
+	+	9	0
+	+	8	33
+	+	12	0
+	+	14	30
+	+	15	39
+	+	16	0
+	+	19	0
+
+> ~/workspace/cr/slides-control/slide-cr.pl
+	*	1556012039	0
+	"	5	0
+
+> ~/src/MoarVM/src/instrument/line_coverage.c
+	*	1556011769	0
+	"	324	0
+
+> ~/workspace/cr/slides-control/slides/2019/04/23/slide.md
+	*	1556011417	0
+	"	15	101
+	^	15	104
+	.	15	101
+	+	1	10
+	+	11	8
+	+	13	30
+	+	14	88
+	+	11	0
+	+	16	0
+	+	16	2
+	+	10	0
+	+	6	0
+	+	9	22
+	+	11	5
+	+	9	133
+	+	15	101
+
+> ~/workspace/cr/slides-control/.envrc
+	*	1556010041	0
+	"	1	34
+	^	1	35
+	.	1	34
+	+	2	24
+	+	1	34
+
+> ~/.zshenv
+	*	1556009552	0
+	"	23	10
+	^	11	0
+	.	6	0
+	+	2	36
+	+	3	18
+	+	25	7
+	+	22	0
+	+	10	8
+	+	6	0
+	+	1	10
+	+	4	1
+	+	21	0
+	+	26	93
+	+	26	0
+	+	27	61
+	+	21	0
+	+	6	0
+	+	6	1
+	+	6	0
+	+	6	61
+	+	6	0
+	+	6	25
+	+	6	0
+	+	12	0
+	+	11	0
+	+	6	0
+
+> ~/src/hg/note/data_mining_theory/4_23.md
+	*	1556006749	0
+	"	2	0
+	.	3	0
+	+	1	1
+	+	3	0
+
+> ~/src/hg/note/data_mining_theory/python-machine-learning-book/code/ch02/ch02.ipynb
+	*	1556005565	0
+	"	1060	4
+
+> ~/src/zsh/completions/_screenshot-type
+	*	1556003392	0
+	"	3	25
+	^	2	27
+	.	2	25
+	+	3	59
+	+	1	0
+	+	2	0
+	+	4	0
+	+	3	3
+	+	2	25
+
+> ~/workspace/cr/slides-control/lib/CLI.pm
+	*	1556001784	0
+	"	133	8
+
+> ~/hoge
+	*	1555993258	0
+	"	1	9
+	^	2	10
+	.	2	0
+	+	2	10
+	+	2	0
+
+> ~/workspace/rust/TRPL/struct_define/src/main.rs
+	*	1555933353	0
+	"	15	0
+	^	14	6
+	.	14	5
+	+	6	0
+	+	7	0
+	+	3	0
+	+	2	0
+	+	5	16
+	+	15	0
+	+	15	5
+	+	15	42
+	+	15	0
+	+	15	43
+	+	15	0
+	+	15	49
+	+	15	42
+	+	15	24
+	+	15	20
+	+	15	0
+	+	15	20
+	+	15	0
+	+	24	0
+	+	23	0
+	+	19	0
+	+	19	19
+	+	20	25
+	+	15	0
+	+	19	13
+	+	20	16
+	+	9	40
+	+	15	0
+	+	9	66
+	+	14	0
+	+	12	41
+	+	11	0
+	+	12	41
+	+	11	11
+	+	13	17
+	+	14	5
+
+> ~/workspace/rust/TRPL/ownership1/src/main.rs
+	*	1555933220	0
+	"	20	30
+	^	20	31
+	.	20	30
+	+	8	0
+	+	8	20
+	+	8	0
+	+	8	29
+	+	3	9
+	+	5	0
+	+	8	0
+	+	12	0
+	+	11	31
+	+	4	22
+	+	7	17
+	+	16	0
+	+	15	32
+	+	5	0
+	+	17	1
+	+	1	1
+	+	21	0
+	+	20	30
+
+> ~/workspace/rust/TRPL/ownership_reference/src/main.rs
+	*	1555931997	0
+	"	22	0
+	^	18	39
+	.	18	38
+	+	8	0
+	+	5	35
+	+	7	49
+	+	10	24
+	+	10	0
+	+	9	0
+	+	12	0
+	+	11	11
+	+	7	40
+	+	13	1
+	+	1	1
+	+	20	0
+	+	20	18
+	+	20	0
+	+	20	36
+	+	20	4
+	+	20	20
+	+	20	0
+	+	20	39
+	+	20	24
+	+	20	0
+	+	20	5
+	+	20	15
+	+	20	4
+	+	20	0
+	+	20	10
+	+	20	0
+	+	19	0
+	+	19	25
+	+	31	0
+	+	24	4
+	+	29	0
+	+	24	0
+	+	25	9
+	+	28	0
+	+	27	22
+	+	30	17
+	+	19	0
+	+	17	29
+	+	22	20
+	+	19	0
+	+	18	38
+
+> ~/src/Perl-1.0/Makefile
+	*	1555928765	0
+	"	105	15
+
+> ~/workspace/rust/TRPL/fib/src/main.rs
+	*	1555923358	0
+	"	27	0
+	^	26	26
+	.	13	0
+	+	15	0
+	+	4	29
+	+	1	11
+	+	4	37
+	+	5	40
+	+	4	11
+	+	5	76
+	+	5	0
+	+	11	0
+	+	10	15
+	+	11	5
+	+	15	0
+	+	27	0
+	+	27	16
+	+	27	30
+	+	13	22
+	+	8	0
+	+	5	8
+	+	14	0
+	+	13	41
+	+	13	61
+	+	5	0
+	+	7	0
+	+	5	0
+	+	4	0
+	+	6	0
+	+	27	9
+	+	17	29
+	+	13	83
+	+	27	0
+	+	20	0
+	+	19	16
+	+	24	0
+	+	23	15
+	+	26	25
+	+	13	0
+
+> ~/workspace/rust/TRPL/guessing_game/src/main.rs
+	*	1555922018	0
+	"	22	26
+	^	21	31
+	.	21	30
+	+	3	12
+	+	8	29
+	+	15	0
+	+	9	0
+	+	15	37
+	+	17	33
+	+	37	0
+	+	19	67
+	+	39	0
+	+	26	38
+	+	1	19
+	+	5	13
+	+	11	0
+	+	10	59
+	+	13	0
+	+	12	56
+	+	1	9
+	+	4	22
+	+	35	0
+	+	31	47
+	+	29	48
+	+	30	49
+	+	31	47
+	+	21	72
+	+	14	9
+	+	15	0
+	+	36	0
+	+	31	32
+	+	32	0
+	+	35	0
+	+	34	0
+	+	35	0
+	+	33	21
+	+	32	36
+	+	21	47
+	+	24	9
+	+	23	19
+	+	29	29
+	+	21	30
+
+> ~/workspace/rust/TRPL/loops/src/main.rs
+	*	1555921630	0
+	"	16	0
+	^	15	26
+	.	15	25
+	+	8	0
+	+	8	16
+	+	8	24
+	+	8	0
+	+	5	29
+	+	7	0
+	+	6	45
+	+	3	0
+	+	1	1
+	+	16	0
+	+	14	0
+	+	13	31
+	+	15	25
+
+> ~/workspace/rust/TRPL/branches/src/main.rs
+	*	1555921181	0
+	"	8	0
+	^	6	6
+	.	6	5
+	+	9	0
+	+	9	12
+	+	9	0
+	+	9	10
+	+	9	0
+	+	6	0
+	+	3	8
+	+	5	8
+	+	8	39
+	+	6	5
+
+> ~/workspace/rust/TRPL/functions/src/main.rs
+	*	1555920641	0
+	"	3	0
+	^	4	21
+	.	4	20
+	+	7	29
+	+	7	0
+	+	7	20
+	+	5	0
+	+	5	23
+	+	7	33
+	+	5	0
+	+	7	28
+	+	9	0
+	+	8	16
+	+	5	0
+	+	4	20
+
+> ~/workspace/rust/TRPL/variables/src/main.rs
+	*	1555917552	0
+	"	5	22
+	^	2	23
+	.	2	22
+	+	3	0
+	+	3	9
+	+	3	0
+	+	3	11
+	+	3	0
+	+	3	32
+	+	3	0
+	+	3	28
+	+	3	0
+	+	3	25
+	+	3	27
+	+	3	0
+	+	2	18
+	+	3	0
+	+	3	20
+	+	2	20
+	+	3	0
+	+	7	0
+	+	6	33
+	+	2	0
+	+	2	22
+
+> ~/workspace/rust/TRPL/guessing_game/.gitignore
+	*	1555916244	0
+	"	2	0
+
+> ~/workspace/rust/TRPL/guessing_game/Cargo.toml
+	*	1555914735	0
+	"	9	14
+	^	9	15
+	.	9	14
+	+	9	14
+
+> ~/workspace/rust/TRPL/guessing_game/Cargo.
+	*	1555914615	0
+	"	1	0
+
+> ~/.gitconfig
+	*	1555911505	0
+	"	29	6
+	^	49	14
+	.	49	14
+	+	17	10
+	+	49	14
+
+> ~/.zsh
+	*	1555911011	0
+	"	1	0
+
+> ~/.zlogin
+	*	1555901446	0
+	"	18	0
+	^	17	1
+	.	18	0
+	+	18	0
