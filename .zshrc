@@ -65,20 +65,20 @@ alias cbclang=/Users/anatofuz/workspace/cr/CbC/build_llvm/bin/clang
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 # }}}
 #fasd {{{
-eval "$(fasd --init auto)"
-alias a='fasd -a'        # any
-alias s='fasd -si'       # show / search / select
-alias d='fasd -d'        # directory
-alias f='fasd -f'        # file
-alias sd='fasd -sid'     # interactive directory selection
-alias sf='fasd -sif'     # interactive file selection
-alias zz='fasd_cd -d'     # cd, same functionality as j in autojump
-alias zzz='fasd_cd -d -i' # cd with interactive selection
-alias c='fasd_cd -d'
-# cf. https://github.com/clvv/fasd
-alias v='f -e vim' # quick opening files with vim
-alias m='f -e mplayer' # quick opening files with mplayer
-alias o='a -e xdg-open' # quick opening files with xdg-open
+#eval "$(fasd --init auto)"
+#alias a='fasd -a'        # any
+#alias s='fasd -si'       # show / search / select
+#alias d='fasd -d'        # directory
+#alias f='fasd -f'        # file
+#alias sd='fasd -sid'     # interactive directory selection
+#alias sf='fasd -sif'     # interactive file selection
+#alias zz='fasd_cd -d'     # cd, same functionality as j in autojump
+#alias zzz='fasd_cd -d -i' # cd with interactive selection
+#alias c='fasd_cd -d'
+## cf. https://github.com/clvv/fasd
+#alias v='f -e vim' # quick opening files with vim
+#alias m='f -e mplayer' # quick opening files with mplayer
+#alias o='a -e xdg-open' # quick opening files with xdg-open
 # }}}
 # perldoc {{{
 alias perldoc='perldoc -M Pod::Text::Color::Delight'
@@ -254,9 +254,9 @@ bindkey '^[pz' peco-z-search
 
 # brew llvm {{{
 #LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
 
 #export PATH="/usr/local/opt/llvm/bin:$PATH"
 # }}}
@@ -268,7 +268,7 @@ export PATH="/Users/anatofuz/.local/bin:$PATH"
 
 # bison {{{
 export PATH="/usr/local/opt/bison/bin:$PATH"
-LDFLAGS="-L/usr/local/opt/bison/lib"
+LDFLAGS="-L/usr/local/opt/bison/lib $LDFLAGS"
 # }}}
 # $HOME/src/bin {{{
 export PATH="$HOME/src/bin:$PATH"
@@ -282,22 +282,22 @@ alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
 # }}}
-export LDFLAGS="-L/usr/local/opt/libffi/lib"
+export LDFLAGS="-L/usr/local/opt/libffi/lib $LDFLAGS"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export blogdir="/Users/anatofuz/Documents/blog"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include $CPPFLAGS"
 
 # for nokogiri {{{
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="/usr/local/opt/libxslt/bin:$PATH"
 
-export LDFLAGS="-L/usr/local/opt/libxml2/lib"
-export CPPFLAGS="-I/usr/local/opt/libxml2/include"
-export LDFLAGS="-L/usr/local/opt/libxslt/lib"
-export CPPFLAGS="-I/usr/local/opt/libxslt/include"
+export LDFLAGS="-L/usr/local/opt/libxml2/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/libxml2/include $CPPFLAGS"
+export LDFLAGS="-L/usr/local/opt/libxslt/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/libxslt/include $CPPFLAGS"
 export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
 export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig"
 # }}}
@@ -384,3 +384,7 @@ function ojicopy {
   echo $ojimsg
   echo $ojimsg | pbcopy
 }
+
+# z (perl6) {{{
+export PATH="/Users/anatofuz/src/github.com/perl6/z/bin:$PATH"
+# }}}
