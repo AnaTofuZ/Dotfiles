@@ -17,6 +17,8 @@ if dein#load_state('/Users/anatofuz/.cache/dein')
   call dein#add('chriskempson/vim-tomorrow-theme')
   call dein#add('zerowidth/vim-copy-as-rtf')
   call dein#add('fatih/vim-go')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-rhubarb')
 
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
@@ -164,3 +166,5 @@ augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
 augroup END
+
+autocmd FileType perl6 setlocal syntax=off
