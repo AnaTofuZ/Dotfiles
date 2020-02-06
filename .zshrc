@@ -9,6 +9,12 @@
 setopt noclobber
 bindkey -e
 
+# zsh hook {{{
+autoload -Uz add-zsh-hook
+autoload -Uz chpwd_recent_dirs cdr
+add-zsh-hook chpwd chpwd_recent_dirs
+# }}}
+
 # plenv {{{
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
@@ -61,9 +67,6 @@ export CBC_COMPILER=$HOME/workspace/cr/CbC/build_llvm/bin/clang
 # CbClang{{{
 alias cbclang=/Users/anatofuz/workspace/cr/CbC/build_llvm/bin/clang
 # }}}
-# nodebrew {{{
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-# }}}
 #fasd {{{
 #eval "$(fasd --init auto)"
 #alias a='fasd -a'        # any
@@ -103,6 +106,7 @@ alias gia="git add"
 alias gc="git commit --verbose"
 alias gp="git push"
 alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
+alias gs="git status"
 # }}}
 # weather{{{
 weather(){
@@ -112,7 +116,7 @@ weather(){
 # lvc {{{
 function lvc() { if [ -f $1 ]; then less $1 | lv -c; fi;  }
 # cf. https://qiita.com/chezou/items/e45b99c7080a3ded0f13
-alias lv='lv -c'
+alias lv='lv -cla -Ou8'
 # }}}
 # pyenv {{{
 export PYENV_ROOT="$HOME/.pyenv"
@@ -193,7 +197,7 @@ rmsandbox(){
 # }}}
 # ghq {{{
 alias g='cd $(ghq root)/$(ghq list | peco)'
-alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+#alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias ghqdoc='godoc $(ghq list --full-path | peco) | $PAGER'
 # }}}
 # bat {{{
@@ -203,10 +207,12 @@ export BAT_THEME="GitHub"
 
 export dirfile="$HOME/.dirfile"
 
-function cd {
-    builtin cd "$@"
+
+function save_dir_history {
     echo $PWD >>| $dirfile
 }
+
+chpwd_functions+=save_dir_history
 
 function hd {
     cd $(cat $dirfile | tail -1)
@@ -220,6 +226,11 @@ function dirfileuniq {
 function dirfile_frequency_cut {
   local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
    echo $new_dirfile >| $dirfile
+}
+
+function dirfile_frequency {
+  local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$dir{$_} : $_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
+  echo $new_dirfile
 }
 
 # }}}
@@ -240,7 +251,7 @@ function peco-z-search
     #        return 1
     #    fi
     #local res=$(cat $dirfile | sort -rn | uniq | peco)
-    local res=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } keys %dir}' | peco)
+    local res=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } grep { $_ !~ /game/ } keys %dir}' | peco)
     if [ -n "$res" ]; then
         BUFFER+="cd $res"
         zle accept-line
@@ -255,10 +266,10 @@ bindkey '^[pz' peco-z-search
 # brew llvm {{{
 #LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
 #export PATH="/usr/local/opt/llvm/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
-export CPPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
-
-#export PATH="/usr/local/opt/llvm/bin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
+#export LDFLAGS="/usr/local/opt/llvm/lib/clang/9.0.0/lib $LDFLAGS"
+#PPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
+##export PATH="/usr/local/opt/llvm/bin:$PATH"
 # }}}
 # toFullwidth {{{
 alias toFullwidth="perl -C -Mutf8 -pe 'tr/0-9a-zA-Z/０-９ａ-ｚＡ-Ｚ/'"
@@ -281,6 +292,7 @@ alias sl="ls"
 alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
+alias ltr="ls -ltr"
 # }}}
 export LDFLAGS="-L/usr/local/opt/libffi/lib $LDFLAGS"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
@@ -388,3 +400,73 @@ function ojicopy {
 # z (perl6) {{{
 export PATH="/Users/anatofuz/src/github.com/perl6/z/bin:$PATH"
 # }}}
+
+# ghg {{{
+export PATH="$HOME/.ghg/bin:$PATH"
+# }}}
+
+# open book {{{{
+function openbooks(){
+  (cd ~/Documents/Books; open "$(find ./ -name \*.pdf   | peco)")
+}
+#}}}
+function ptvim () {
+  vim $(pt $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
+}
+
+export CBC_LANG_COMPILER="/Users/anatofuz/workspace/cr/CbC/build_llvm/bin/clang"
+
+# opam configuration
+test -r /Users/anatofuz/.opam/opam-init/init.zsh && . /Users/anatofuz/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+alias llldb="$HOME/workspace/compiler/llvm/llvm-project/build/bin/lldb"
+
+function gi2hgi {
+  local gitignore=${PWD}/.gitignore
+  if [[ ! (-f $gitignore) ]]; then
+    exit 1
+  fi
+  echo 'syntax:glob' >| .hgignore
+  cat $gitignore >> .hgignore
+  rm $gitignore
+}
+
+# nodenv {{{
+eval "$(nodenv init - --no-rehash)"
+#}}}
+
+# colordiff {{{
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff'
+fi
+#}}}
+
+# ARM_LIBRARY {{{
+export ARM_LIBRARY="/Users/anatofuz/workspace/cr/arm_library"
+# }}}
+
+# stack {{{
+export PATH="$HOME/.local/bin:$PATH"
+# }}}
+
+# rm_last {{{
+function rm_last {
+  rm -rf $(ls -tr | tail -1)
+}
+#}}}
+
+# zen {{{
+export PATH="${HOME}/workspace/zen/zen-macos-x86_64-0.8.20191124+552247019:$PATH"
+# }}}
+
+# fdvim {{{
+function fdvim {
+  vim $(fd $1 | peco)
+}
+# }}}
+
+# libc man {{{
+export MANPATH="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/share/man:$MANPATH"
+# }}}
+
+alias gh="hg"
