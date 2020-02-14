@@ -118,6 +118,9 @@ function lvc() { if [ -f $1 ]; then less $1 | lv -c; fi;  }
 # cf. https://qiita.com/chezou/items/e45b99c7080a3ded0f13
 alias lv='lv -cla -Ou8'
 # }}}
+# less {{{
+alias less="less -r"
+# }}}
 # pyenv {{{
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -421,6 +424,7 @@ test -r /Users/anatofuz/.opam/opam-init/init.zsh && . /Users/anatofuz/.opam/opam
 
 alias llldb="$HOME/workspace/compiler/llvm/llvm-project/build/bin/lldb"
 
+# gi2hgi {{{
 function gi2hgi {
   local gitignore=${PWD}/.gitignore
   if [[ ! (-f $gitignore) ]]; then
@@ -430,43 +434,63 @@ function gi2hgi {
   cat $gitignore >> .hgignore
   rm $gitignore
 }
-
+# }}}
 # nodenv {{{
 eval "$(nodenv init - --no-rehash)"
 #}}}
-
 # colordiff {{{
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff'
 fi
 #}}}
-
 # ARM_LIBRARY {{{
 export ARM_LIBRARY="/Users/anatofuz/workspace/cr/arm_library"
 # }}}
-
 # stack {{{
 export PATH="$HOME/.local/bin:$PATH"
 # }}}
-
 # rm_last {{{
 function rm_last {
   rm -rf $(ls -tr | tail -1)
 }
 #}}}
-
 # zen {{{
 export PATH="${HOME}/workspace/zen/zen-macos-x86_64-0.8.20191124+552247019:$PATH"
 # }}}
-
 # fdvim {{{
 function fdvim {
   vim $(fd $1 | peco)
 }
 # }}}
-
 # libc man {{{
 export MANPATH="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/share/man:$MANPATH"
 # }}}
+# openjdk {{{
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/usr/local/opt/openjdk/include:$CPPFLAGS"
+# }}}
+# history_peco {{{
+function peco-history-selection() {
+BUFFER=`history | perl -nle 'print $1 if /\d+\s+\d{2}:\d{2}\s+(.*)/' | peco`
+#BUFFER=`cat ~/.zsh_history | perl -nle 'print $1 if /:\s+\d+:\d;(.*)/' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
 
-alias gh="hg"
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
+
+function phr() {
+BUFFER=`history | perl -nle 'print $1 if /\d+\s+\d{2}:\d{2}\s+(.*)/' | perl -e 'print reverse <>' | peco`
+#BUFFER=`cat ~/.zsh_history | perl -nle 'print $1 if /:\s+\d+:\d;(.*)/' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+zle -N phr
+
+
+# }}}
+# p6env {{{
+export PATH="$HOME/.p6env/bin:$PATH"
+eval "$(p6env init -)"
+# }}}
