@@ -16,7 +16,6 @@ if dein#load_state('/Users/anatofuz/.cache/dein')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('chriskempson/vim-tomorrow-theme')
   call dein#add('zerowidth/vim-copy-as-rtf')
-  call dein#add('fatih/vim-go')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-rhubarb')
 

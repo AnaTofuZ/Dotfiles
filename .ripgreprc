@@ -1,0 +1,10 @@
+# Add 'cbc' type.
+--type-add
+cbc:*.{cbc,c,h}
+
+# color
+--colors=match:none
+--colors=match:bg:0x33,0x66,0xFF
+--colors=match:fg:white
+--colors=match:style:bold
+

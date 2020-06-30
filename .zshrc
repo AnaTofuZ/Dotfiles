@@ -9,6 +9,16 @@
 setopt noclobber
 bindkey -e
 
+
+# zsh-completions {{{
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+# }}}
+
 # zsh hook {{{
 autoload -Uz add-zsh-hook
 autoload -Uz chpwd_recent_dirs cdr
@@ -58,10 +68,11 @@ alias be="bundle exec"
 #compdef _slide-cr slide-cr
 # }}}
 # CbCgcc {{{
-alias cbcgcc=/Users/anatofuz/workspace/cr/CbC/build_gcc/bin/gcc
+alias cbcgcc=/Users/anatofuz/workspace/cr/CbC/latest_gcc/tmpbuild/bin/gcc
 # }}}
 # CBC_COMPILER {{{
-export CBC_COMPILER=$HOME/workspace/cr/CbC/build_llvm/bin/clang
+#export CBC_COMPILER=$HOME/workspace/cr/CbC/build_llvm/bin/clang
+export CBC_COMPILER=/Users/anatofuz/workspace/cr/CbC/latest_gcc/tmpbuild/bin/gcc
 #export CBC_COMPILER=/Users/anatofuz/workspace/cr/CbC/build_gcc/bin/gcc
 # }}}
 # CbClang{{{
@@ -237,6 +248,7 @@ function dirfile_frequency {
 }
 
 # }}}
+alias eject="diskutil eject"
 
 #function peco-z-search# {{{
 function peco-z-search
@@ -267,12 +279,12 @@ bindkey '^[pz' peco-z-search
 # }}}
 
 # brew llvm {{{
-#LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+#export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
 #export PATH="/usr/local/opt/llvm/bin:$PATH"
 #export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
 #export LDFLAGS="/usr/local/opt/llvm/lib/clang/9.0.0/lib $LDFLAGS"
-#PPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
-##export PATH="/usr/local/opt/llvm/bin:$PATH"
+#export PPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
 # }}}
 # toFullwidth {{{
 alias toFullwidth="perl -C -Mutf8 -pe 'tr/0-9a-zA-Z/０-９ａ-ｚＡ-Ｚ/'"
@@ -282,7 +294,7 @@ export PATH="/Users/anatofuz/.local/bin:$PATH"
 
 # bison {{{
 export PATH="/usr/local/opt/bison/bin:$PATH"
-LDFLAGS="-L/usr/local/opt/bison/lib $LDFLAGS"
+#LDFLAGS="-L/usr/local/opt/bison/lib $LDFLAGS"
 # }}}
 # $HOME/src/bin {{{
 export PATH="$HOME/src/bin:$PATH"
@@ -309,9 +321,9 @@ export CPPFLAGS="-I/usr/local/opt/icu4c/include $CPPFLAGS"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="/usr/local/opt/libxslt/bin:$PATH"
 
-export LDFLAGS="-L/usr/local/opt/libxml2/lib $LDFLAGS"
+#export LDFLAGS="-L/usr/local/opt/libxml2/lib $LDFLAGS"
 export CPPFLAGS="-I/usr/local/opt/libxml2/include $CPPFLAGS"
-export LDFLAGS="-L/usr/local/opt/libxslt/lib $LDFLAGS"
+#export LDFLAGS="-L/usr/local/opt/libxslt/lib $LDFLAGS"
 export CPPFLAGS="-I/usr/local/opt/libxslt/include $CPPFLAGS"
 export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
 export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig"
@@ -319,7 +331,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig"
 # perl6 zef path {{{
 export PATH="$(readlink $(where perl6) | perl -pne 's[\.\.][/usr/local]; s[(.*)/bin/perl6][$1/share/perl6/site/bin]'):$PATH"
 # }}}
-
 # history {{{
 # 履歴ファイルの保存先
 export HISTFILE=${HOME}/.zsh_history
@@ -362,7 +373,6 @@ path=("$HOME/src/firefly/hg/Members/anatofuz/anatofuz-tools" $path)
 # cpm {{{
 alias cpc="cpm install; carton install;"
 # }}}
-
 # heroku autocomplete setup {{{
 HEROKU_AC_ZSH_SETUP_PATH=/Users/anatofuz/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 # }}}
@@ -378,15 +388,12 @@ if [ -f '/Users/anatofuz/workspace/commands/google-cloud-sdk/path.zsh.inc' ]; th
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/anatofuz/workspace/commands/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/anatofuz/workspace/commands/google-cloud-sdk/completion.zsh.inc'; fi
 # }}}
-
 # haxe {{{
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 # }}}
-
 # openssh {{{
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 #}}}
-
 # pwdcopy{{{
 function pwdcopy(){
   pwd | pbcopy
@@ -403,11 +410,9 @@ function ojicopy {
 # z (perl6) {{{
 export PATH="/Users/anatofuz/src/github.com/perl6/z/bin:$PATH"
 # }}}
-
 # ghg {{{
 export PATH="$HOME/.ghg/bin:$PATH"
 # }}}
-
 # open book {{{{
 function openbooks(){
   (cd ~/Documents/Books; open "$(find ./ -name \*.pdf   | peco)")
@@ -423,7 +428,6 @@ export CBC_LANG_COMPILER="/Users/anatofuz/workspace/cr/CbC/build_llvm/bin/clang"
 test -r /Users/anatofuz/.opam/opam-init/init.zsh && . /Users/anatofuz/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 alias llldb="$HOME/workspace/compiler/llvm/llvm-project/build/bin/lldb"
-
 # gi2hgi {{{
 function gi2hgi {
   local gitignore=${PWD}/.gitignore
@@ -494,3 +498,18 @@ zle -N phr
 export PATH="$HOME/.p6env/bin:$PATH"
 eval "$(p6env init -)"
 # }}}
+# hi {{{
+function hi() {
+  local gitvar=`curl -L -s https://www.gitignore.io/api/$@`
+  printf 'syntax:glob\n%s\n' ${gitvar}
+}
+
+# }}}
+# ripgrep {{{
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+# }}}
+# firefly {{{
+export fireflyhg_local=$HOME/src/firefly/hg
+export fireflyhg=ssh://firefly/hg
+# }}}
+
