@@ -29,12 +29,6 @@ add-zsh-hook chpwd chpwd_recent_dirs
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 # }}}
-# GOPATH {{{
-export GOPATH=$HOME
-export PATH=$PATH:$(go env GOPATH)/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GO111MODULE=on
-#}}}
 # hub {{{
 function git(){hub "$@"}
 # }}}
@@ -154,7 +148,7 @@ screenshot-type () {
     if [ $# -ne 1 ]; then
         echo "require bmp,gif,jpg,pdf,png,tiff"
         return 1
-    else 
+    else
         defaults write com.apple.screencapture type $1
     fi
 }
@@ -233,17 +227,17 @@ function hd {
 }
 
 function dirfileuniq {
-    local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } keys %dir}')
+    local new_dirfile=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } keys %dir}')
     echo $new_dirfile >| $dirfile
 }
 
 function dirfile_frequency_cut {
-  local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
+  local new_dirfile=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
    echo $new_dirfile >| $dirfile
 }
 
 function dirfile_frequency {
-  local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$dir{$_} : $_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
+  local new_dirfile=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$dir{$_} : $_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
   echo $new_dirfile
 }
 
@@ -266,7 +260,7 @@ function peco-z-search
     #        return 1
     #    fi
     #local res=$(cat $dirfile | sort -rn | uniq | peco)
-    local res=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } grep { $_ !~ /game/ } keys %dir}' | peco)
+    local res=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } grep { $_ !~ /game/ } keys %dir}' | peco)
     if [ -n "$res" ]; then
         BUFFER+="cd $res"
         zle accept-line
@@ -333,7 +327,20 @@ export PATH="$(readlink $(where perl6) | perl -pne 's[\.\.][/usr/local]; s[(.*)/
 # }}}
 # history {{{
 # 履歴ファイルの保存先
-export HISTFILE=${HOME}/.zsh_history
+
+host=$HOST:fr
+tty=$TTY:t
+
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+
+if [[ -w $HOME ]]; then
+HISTFILE=$HOME/.history.$tty
+#export HISTSIZE=200
+#export SAVEHIST=$HISTSIZE
+fi
+
+#export HISTFILE=${HOME}/.zsh_history
 
 # メモリに保存される履歴の件数
 export HISTSIZE=10000
@@ -347,7 +354,7 @@ setopt hist_ignore_dups
 # 開始と終了を記録
 setopt EXTENDED_HISTORY
 
-setopt SHARE_HISTORY
+#setopt SHARE_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
 alias   h="fc -l -d -20"
 alias   history="fc -l -d -$HISTSIZE"
@@ -512,4 +519,9 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export fireflyhg_local=$HOME/src/firefly/hg
 export fireflyhg=ssh://firefly/hg
 # }}}
-
+# GOPATH {{{
+export GOPATH=$HOME
+export PATH=$(go env GOPATH)/bin:$PATH
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GO111MODULE=on
+#}}}

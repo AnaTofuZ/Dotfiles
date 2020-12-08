@@ -167,3 +167,6 @@ augroup vimrcEx
 augroup END
 
 autocmd FileType perl6 setlocal syntax=off
+
+autocmd BufWritePre * :%s/\s\+$//e
+
