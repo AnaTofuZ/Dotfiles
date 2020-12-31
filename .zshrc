@@ -9,7 +9,16 @@
 setopt noclobber
 bindkey -e
 
+unsetopt BEEP
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
 
+setopt HIST_VERIFY
+setopt printeightbit
+
+#golang {{{
+export PATH="/usr/local/go/bin:$PATH"
+#}}}
 # zsh-completions {{{
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -18,19 +27,17 @@ if type brew &>/dev/null; then
   compinit
 fi
 # }}}
-
 # zsh hook {{{
 autoload -Uz add-zsh-hook
 autoload -Uz chpwd_recent_dirs cdr
 add-zsh-hook chpwd chpwd_recent_dirs
 # }}}
-
 # plenv {{{
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 # }}}
 # hub {{{
-function git(){hub "$@"}
+#function git(){hub "$@"}
 # }}}
 # man {{{
 # cf. https://qiita.com/yu-ichiro/items/ea9c672e2d7488416db9
@@ -296,7 +303,7 @@ export PATH="$HOME/src/bin:$PATH"
 export PATH="/usr/local/opt/m4/bin:$PATH"
 #export PATH="/Users/anatofuz/.cabal/bin:$PATH"
 # ls alias {{{
-alias ls="ls -GF"
+alias ls="ls -F --color=auto"
 alias sl="ls"
 alias la="ls -a"
 alias ll="ls -l"
@@ -365,12 +372,9 @@ prompt='%S+%s%m%S+%s%n$ '
 
 
 # zsh syntax highlight {{{
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # }}}
 path=("$HOME/anaconda3/bin" $path)
-# grep color {{{
-export GREP_OPTIONS='--color=auto'
-# }}}
 
 export STUDENT_NUMBER_MASTER="k198584"
 
@@ -447,7 +451,7 @@ function gi2hgi {
 }
 # }}}
 # nodenv {{{
-eval "$(nodenv init - --no-rehash)"
+#eval "$(nodenv init - --no-rehash)"
 #}}}
 # colordiff {{{
 if [[ -x `which colordiff` ]]; then
@@ -502,8 +506,8 @@ zle -N phr
 
 # }}}
 # p6env {{{
-export PATH="$HOME/.p6env/bin:$PATH"
-eval "$(p6env init -)"
+#export PATH="$HOME/.p6env/bin:$PATH"
+#eval "$(p6env init -)"
 # }}}
 # hi {{{
 function hi() {
@@ -524,4 +528,7 @@ export GOPATH=$HOME
 export PATH=$(go env GOPATH)/bin:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GO111MODULE=on
+#}}}
+# gpg key {{{
+export GPG_TTY=$(tty)
 #}}}

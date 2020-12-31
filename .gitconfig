@@ -2,7 +2,7 @@
 	name = AnaTofuZ
 	email = anatofuz@gmail.com
 	username = AnaTofuZ
-	signingKey = C9836696571DA28F
+	signingkey = 8F95EB309AA092AB
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -19,7 +19,7 @@
 	excludesfile = /Users/e155730/.gitignore
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -47,4 +47,4 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+	program = /usr/bin/gpg

@@ -4,18 +4,17 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/anatofuz/.cache/dein')
-  call dein#begin('/Users/anatofuz/.cache/dein')
+if dein#load_state('/home/anatofuz/.cache/dein')
+  call dein#begin('/home/anatofuz/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('/home/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('chriskempson/vim-tomorrow-theme')
-  call dein#add('zerowidth/vim-copy-as-rtf')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-rhubarb')
 
@@ -37,7 +36,7 @@ syntax enable
 "  call dein#install()
 "endif
 
-"End dein Scripts------------------------- }}}
+"End dein Scripts-------------------------}}}
 
 language ja_JP.UTF-8
 " language ja_JP.eucJP
@@ -52,7 +51,7 @@ set backupcopy=yes
 syntax on
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
-colorscheme Tomorrow
+"colorscheme Tomorrow
 set tags=tags;/
 set runtimepath+=~/src/public/qfixapp
 let howm_dir="~/public_html/howm/"
@@ -170,3 +169,6 @@ autocmd FileType perl6 setlocal syntax=off
 
 autocmd BufWritePre * :%s/\s\+$//e
 
+
+"for wsl2
+set visualbell t_vb=

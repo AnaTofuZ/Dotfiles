@@ -63,8 +63,7 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 # Rust
-#export PATH="$HOME/.cargo/bin:$PATH"
-path=($HOME/.cargo/bin $path)
+#path=($HOME/.cargo/bin $path)
 
 # rust zsh completions {{{
 if hash rustup 2>/dev/null; then
