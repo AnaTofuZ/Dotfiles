@@ -16,6 +16,13 @@ setopt INC_APPEND_HISTORY
 setopt HIST_VERIFY
 setopt printeightbit
 
+#pbcopy {{{
+alias pbcopy="xsel --clipboard --input"
+#}}}
+# ubuntu open {{{
+alias open="xdg-open"
+#}}}
+
 #golang {{{
 export PATH="/usr/local/go/bin:$PATH"
 #}}}
@@ -139,7 +146,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-alias brew="env PATH=${PATH/\/Users\/anatofuz\/\.pyenv\/shims:/} brew"
+#alias brew="env PATH=${PATH/\/Users\/anatofuz\/\.pyenv\/shims:/} brew"
 # cf. http://www.task-notes.com/entry/20141223/1419324649
 # }}}
 # aws {{{
@@ -198,7 +205,7 @@ alias perlib='perl -Ilocal/lib/perl5'
 #LC_ALL{{{
 #export LC_ALL="ja_JP.UTF-8"
 ##export LC_CTYPE=C
-#export LANG="ja_JP.UTF-8"
+export LANG="en_US.UTF-8"
 #}}}
 # sandbox {{{
 sandbox(){
@@ -291,7 +298,7 @@ bindkey '^[pz' peco-z-search
 alias toFullwidth="perl -C -Mutf8 -pe 'tr/0-9a-zA-Z/０-９ａ-ｚＡ-Ｚ/'"
 # }}}
 export PATH="/usr/local/opt/libarchive/bin:$PATH"
-export PATH="/Users/anatofuz/.local/bin:$PATH"
+#export PATH="/Users/anatofuz/.local/bin:$PATH"
 
 # bison {{{
 export PATH="/usr/local/opt/bison/bin:$PATH"
@@ -451,7 +458,8 @@ function gi2hgi {
 }
 # }}}
 # nodenv {{{
-#eval "$(nodenv init - --no-rehash)"
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init - --no-rehash)"
 #}}}
 # colordiff {{{
 if [[ -x `which colordiff` ]]; then
@@ -531,4 +539,7 @@ export GO111MODULE=on
 #}}}
 # gpg key {{{
 export GPG_TTY=$(tty)
+#}}}
+#nwjs {{{
+export PATH="$HOME/workspace/game/bin:$PATH"
 #}}}
