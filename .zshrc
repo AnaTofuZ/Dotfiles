@@ -261,20 +261,12 @@ alias eject="diskutil eject"
 #function peco-z-search# {{{
 function peco-z-search
 {
-    which peco z > /dev/null
+    which peco > /dev/null
     if [ $? -ne 0 ]; then
-        echo "Please install peco and z"
+        echo "Please install peco "
         return (1)
     fi
-    #local res=$(z | sort -rn | cut -c 12- | peco)
-    #if [ -n "$res" ]; then
-    #    BUFFER+="cd $res"
-    #    zle accept-line
-    #    else
-    #        return 1
-    #    fi
-    #local res=$(cat $dirfile | sort -rn | uniq | peco)
-    local res=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } grep { $_ !~ /game/ } keys %dir}' | peco)
+    local res=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } grep { $_ !~ /game/ } keys %dir}' | peco)
     if [ -n "$res" ]; then
         BUFFER+="cd $res"
         zle accept-line
@@ -539,7 +531,4 @@ export GO111MODULE=on
 #}}}
 # gpg key {{{
 export GPG_TTY=$(tty)
-#}}}
-#nwjs {{{
-export PATH="$HOME/workspace/game/bin:$PATH"
 #}}}
