@@ -24,7 +24,7 @@ alias open="xdg-open"
 #}}}
 
 #golang {{{
-export PATH="/usr/local/go/bin:$PATH"
+#export PATH="/usr/local/go/bin:$PATH"
 #}}}
 # zsh-completions {{{
 if type brew &>/dev/null; then
@@ -80,7 +80,7 @@ alias cbcgcc=/Users/anatofuz/workspace/cr/CbC/latest_gcc/tmpbuild/bin/gcc
 # }}}
 # CBC_COMPILER {{{
 #export CBC_COMPILER=$HOME/workspace/cr/CbC/build_llvm/bin/clang
-export CBC_COMPILER=/Users/anatofuz/workspace/cr/CbC/latest_gcc/tmpbuild/bin/gcc
+export CBC_COMPILER=/home/anatofuz/workspace/ie/build/cbc_gcc/bin/gcc
 #export CBC_COMPILER=/Users/anatofuz/workspace/cr/CbC/build_gcc/bin/gcc
 # }}}
 # CbClang{{{

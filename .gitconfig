@@ -48,3 +48,5 @@
 	gpgsign = true
 [gpg]
 	program = /usr/bin/gpg
+[pull]
+	rebase = false
