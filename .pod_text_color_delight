@@ -29,9 +29,9 @@
         Symbol            => 'reset',
         Operator          => 'reset',
 
-        Comment_Normal    => 'bright_green',
-        Comment_POD       => 'bright_green',
-        DATA              => 'bright_green',
+        Comment_Normal    => 'green',
+        Comment_POD       => 'green',
+        DATA              => 'green',
 
         Directive         => 'bright_red',
     },

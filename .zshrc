@@ -7,14 +7,12 @@ setopt INC_APPEND_HISTORY
 
 setopt HIST_VERIFY
 setopt printeightbit
-
 #pbcopy {{{
 alias pbcopy="xsel --clipboard --input"
 #}}}
 # ubuntu open {{{
-alias open="xdg-open"
+#alias open="xdg-open"
 #}}}
-
 #golang {{{
 #export PATH="/usr/local/go/bin:$PATH"
 #}}}
@@ -35,9 +33,6 @@ add-zsh-hook chpwd chpwd_recent_dirs
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 # }}}
-# hub {{{
-#function git(){hub "$@"}
-# }}}
 # man {{{
 # cf. https://qiita.com/yu-ichiro/items/ea9c672e2d7488416db9
 alias man='env LANG=C man'
@@ -47,7 +42,7 @@ export RBENV_ROOT="$HOME/.rbenv"
 path=($HOME/.rbenv/bin $path)
 eval "$(rbenv init -)"
 
-function rbenv_updaqte(){
+function rbenv_update(){
   currnt_dir=$PWD
   cd $HOME/.rbenv
   git pull
@@ -67,16 +62,10 @@ alias be="bundle exec"
 #
 #compdef _slide-cr slide-cr
 # }}}
-# CbCgcc {{{
-alias cbcgcc=/Users/anatofuz/workspace/cr/CbC/latest_gcc/tmpbuild/bin/gcc
-# }}}
 # CBC_COMPILER {{{
 #export CBC_COMPILER=$HOME/workspace/cr/CbC/build_llvm/bin/clang
 export CBC_COMPILER=/home/anatofuz/workspace/ie/build/cbc_gcc/bin/gcc
 #export CBC_COMPILER=/Users/anatofuz/workspace/cr/CbC/build_gcc/bin/gcc
-# }}}
-# CbClang{{{
-alias cbclang=/Users/anatofuz/workspace/cr/CbC/build_llvm/bin/clang
 # }}}
 #fasd {{{
 #eval "$(fasd --init auto)"
@@ -132,43 +121,15 @@ alias lv='lv -cla -Ou8'
 # less {{{
 alias less="less -r"
 # }}}
-# pyenv {{{
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-#alias brew="env PATH=${PATH/\/Users\/anatofuz\/\.pyenv\/shims:/} brew"
-# cf. http://www.task-notes.com/entry/20141223/1419324649
-# }}}
-# aws {{{
-#export PATH=/Users/anatofuz/.pyenv/versions/3.6.5/bin:$PATH
-# cf. https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-install-macos.html
-#source /Users/anatofuz/.pyenv/versions/3.6.5/bin/aws_zsh_completer.sh
-# }}}
 # gitignore {{{
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 #}}}
-# screenshot-type {{{
-screenshot-type () {
-    if [ $# -ne 1 ]; then
-        echo "require bmp,gif,jpg,pdf,png,tiff"
-        return 1
-    else
-        defaults write com.apple.screencapture type $1
-    fi
-}
-
-# }}}
 # longman {{{
 function longman(){ open "https://www.ldoceonline.com/jp/search/?q=$*" }
 # }}}
 # google cloud sdk {{{
 #source /Users/anatofuz/src/google-cloud-sdk/completion.zsh.inc
 #source /Users/anatofuz/src/google-cloud-sdk/path.zsh.inc
-# }}}
-# zplug {{{
-#source ~/.zplug/init.zsh
 # }}}
 # pipenv {{{
 #eval "$(pipenv --completion)"
@@ -185,12 +146,6 @@ EOF
 # carton {{{
 alias ce='carton exec --'
 # }}}
-# qt {{{
-export PATH="/usr/local/opt/qt/bin:$PATH"
-# }}}
-# heroku autocomplete setup{{{
-HEROKU_AC_ZSH_SETUP_PATH=/Users/anatofuz/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-#}}}
 #perlib {{{
 alias perlib='perl -Ilocal/lib/perl5'
 #}}}
@@ -249,7 +204,6 @@ function dirfile_frequency {
 
 # }}}
 alias eject="diskutil eject"
-
 #function peco-z-search# {{{
 function peco-z-search
 {
@@ -269,21 +223,11 @@ function peco-z-search
 zle -N peco-z-search
 bindkey '^[pz' peco-z-search
 # }}}
-
-# brew llvm {{{
-#export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-#export PATH="/usr/local/opt/llvm/bin:$PATH"
-#export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
-#export LDFLAGS="/usr/local/opt/llvm/lib/clang/9.0.0/lib $LDFLAGS"
-#export PPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
-#export PATH="/usr/local/opt/llvm/bin:$PATH"
-# }}}
 # toFullwidth {{{
 alias toFullwidth="perl -C -Mutf8 -pe 'tr/0-9a-zA-Z/０-９ａ-ｚＡ-Ｚ/'"
 # }}}
 export PATH="/usr/local/opt/libarchive/bin:$PATH"
 #export PATH="/Users/anatofuz/.local/bin:$PATH"
-
 # bison {{{
 export PATH="/usr/local/opt/bison/bin:$PATH"
 #LDFLAGS="-L/usr/local/opt/bison/lib $LDFLAGS"
@@ -303,26 +247,11 @@ alias ltr="ls -ltr"
 # }}}
 export LDFLAGS="-L/usr/local/opt/libffi/lib $LDFLAGS"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-export blogdir="/Users/anatofuz/Documents/blog"
+export blogdir="$HOME/Documents/blog"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export LDFLAGS="-L/usr/local/opt/icu4c/lib $LDFLAGS"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include $CPPFLAGS"
-
-# for nokogiri {{{
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export PATH="/usr/local/opt/libxslt/bin:$PATH"
-
-#export LDFLAGS="-L/usr/local/opt/libxml2/lib $LDFLAGS"
-export CPPFLAGS="-I/usr/local/opt/libxml2/include $CPPFLAGS"
-#export LDFLAGS="-L/usr/local/opt/libxslt/lib $LDFLAGS"
-export CPPFLAGS="-I/usr/local/opt/libxslt/include $CPPFLAGS"
-export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
-export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig"
-# }}}
-# perl6 zef path {{{
-export PATH="$(readlink $(where perl6) | perl -pne 's[\.\.][/usr/local]; s[(.*)/bin/perl6][$1/share/perl6/site/bin]'):$PATH"
-# }}}
 # history {{{
 # 履歴ファイルの保存先
 
@@ -333,7 +262,7 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
 if [[ -w $HOME ]]; then
-HISTFILE=$HOME/.history.$tty
+HISTFILE=$HOME/.history
 #export HISTSIZE=200
 #export SAVEHIST=$HISTSIZE
 fi
@@ -344,7 +273,7 @@ fi
 export HISTSIZE=10000
 
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=1000000
+export SAVEHIST=10000000
 
 # 重複を記録しない
 setopt hist_ignore_dups
@@ -360,58 +289,26 @@ alias   history="fc -l -d -$HISTSIZE"
 #autoload -U promptinit; promptinit
 #prompt pure
 prompt='%S+%s%m%S+%s%n$ '
-
-
 # zsh syntax highlight {{{
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # }}}
-path=("$HOME/anaconda3/bin" $path)
-
-export STUDENT_NUMBER_MASTER="k198584"
-
 # anatofuz-tools {{{
 path=("$HOME/src/firefly/hg/Members/anatofuz/anatofuz-tools" $path)
 #}}}
 # cpm {{{
 alias cpc="cpm install; carton install;"
 # }}}
-# heroku autocomplete setup {{{
-HEROKU_AC_ZSH_SETUP_PATH=/Users/anatofuz/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-# }}}
-
-export cellar="/usr/local/Cellar"
-
 path=(/usr/local/linaro/arm-linux-gnueabihf-raspbian/bin $path)
-
-# gcloud {{{
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/anatofuz/workspace/commands/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/anatofuz/workspace/commands/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/anatofuz/workspace/commands/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/anatofuz/workspace/commands/google-cloud-sdk/completion.zsh.inc'; fi
-# }}}
-# haxe {{{
-export HAXE_STD_PATH="/usr/local/lib/haxe/std"
-# }}}
-# openssh {{{
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-#}}}
 # pwdcopy{{{
 function pwdcopy(){
   pwd | pbcopy
 }
 #}}}
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-
 function ojicopy {
   local ojimsg=$(ojichat $@)
   echo $ojimsg
   echo $ojimsg | pbcopy
 }
-
-# z (perl6) {{{
-export PATH="/Users/anatofuz/src/github.com/perl6/z/bin:$PATH"
-# }}}
 # ghg {{{
 export PATH="$HOME/.ghg/bin:$PATH"
 # }}}
@@ -423,13 +320,7 @@ function openbooks(){
 function ptvim () {
   vim $(pt $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
-
-export CBC_LANG_COMPILER="/Users/anatofuz/workspace/cr/CbC/build_llvm/bin/clang"
-
-# opam configuration
-test -r /Users/anatofuz/.opam/opam-init/init.zsh && . /Users/anatofuz/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-alias llldb="$HOME/workspace/compiler/llvm/llvm-project/build/bin/lldb"
+export CBC_LANG_COMPILER=cbclang
 # gi2hgi {{{
 function gi2hgi {
   local gitignore=${PWD}/.gitignore
@@ -451,9 +342,9 @@ if [[ -x `which colordiff` ]]; then
 fi
 #}}}
 # ARM_LIBRARY {{{
-export ARM_LIBRARY="/Users/anatofuz/workspace/cr/arm_library"
+#export ARM_LIBRARY="/Users/anatofuz/workspace/cr/arm_library"
 # }}}
-# stack {{{
+# $HOME/.local/bin {{{
 export PATH="$HOME/.local/bin:$PATH"
 # }}}
 # rm_last {{{
@@ -471,10 +362,6 @@ function fdvim {
 # }}}
 # libc man {{{
 export MANPATH="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/share/man:$MANPATH"
-# }}}
-# openjdk {{{
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/usr/local/opt/openjdk/include:$CPPFLAGS"
 # }}}
 # history_peco {{{
 function peco-history-selection() {
@@ -496,10 +383,6 @@ BUFFER=`history | perl -nle 'print $1 if /\d+\s+\d{2}:\d{2}\s+(.*)/' | perl -e '
 zle -N phr
 
 
-# }}}
-# p6env {{{
-#export PATH="$HOME/.p6env/bin:$PATH"
-#eval "$(p6env init -)"
 # }}}
 # hi {{{
 function hi() {
@@ -523,4 +406,11 @@ export GO111MODULE=on
 #}}}
 # gpg key {{{
 export GPG_TTY=$(tty)
+#}}}
+# ubuntu : perldoc {{{
+#alias perldoc="/home/anatofuz/.plenv/shims/perldoc"
+#}}}
+# rakuenv {{{
+export PATH="$HOME/.rakuenv/bin:$PATH"
+eval "$(rakuenv init -)"
 #}}}
