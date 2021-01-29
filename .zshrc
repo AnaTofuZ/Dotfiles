@@ -188,17 +188,17 @@ function hd {
 }
 
 function dirfileuniq {
-    local new_dirfile=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } keys %dir}')
+    local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } keys %dir}')
     echo $new_dirfile >| $dirfile
 }
 
 function dirfile_frequency_cut {
-  local new_dirfile=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
+  local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
    echo $new_dirfile >| $dirfile
 }
 
 function dirfile_frequency {
-  local new_dirfile=$(cat $dirfile | /usr/local/bin/perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$dir{$_} : $_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
+  local new_dirfile=$(cat $dirfile | perl -ne 'BEGIN{%dir;} chomp($_); $dir{$_}++; END{map { print "$dir{$_} : $_\n" if (-d $_) } sort grep { $dir{$_} > 1} keys %dir}')
   echo $new_dirfile
 }
 
@@ -353,7 +353,7 @@ function rm_last {
 }
 #}}}
 # zen {{{
-export PATH="${HOME}/workspace/zen/zen-macos-x86_64-0.8.20191124+552247019:$PATH"
+#export PATH="${HOME}/workspace/zen/zen-macos-x86_64-0.8.20191124+552247019:$PATH"
 # }}}
 # fdvim {{{
 function fdvim {
@@ -400,7 +400,7 @@ export fireflyhg=ssh://firefly/hg
 # }}}
 # GOPATH {{{
 export GOPATH=$HOME
-export PATH=$(go env GOPATH)/bin:$PATH
+#export PATH=$(go env GOPATH)/bin:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GO111MODULE=on
 #}}}
@@ -414,3 +414,7 @@ export GPG_TTY=$(tty)
 export PATH="$HOME/.rakuenv/bin:$PATH"
 eval "$(rakuenv init -)"
 #}}}
+#singularity sif {{{
+export PATH="$HOME/workspace/tools/singularity-sif:$PATH"
+#}}}
+export EDITOR="/usr/bin/vim"

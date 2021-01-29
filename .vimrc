@@ -14,6 +14,7 @@ if dein#load_state('/home/anatofuz/.cache/dein')
   " Required:
   call dein#add('/home/anatofuz/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('junegunn/vim-easy-align')
+  call dein#add('tpope/vim-surround')
   call dein#add('chriskempson/vim-tomorrow-theme')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-rhubarb')
@@ -66,46 +67,46 @@ let howm_fileformat      = 'unix'
 
 " ai
 " Emacs like key in Insert mode
-map!  A
-map!  0I
-map!  lli
-map!  i
-" map!  ka
-" map!  ja
-map!  :su
-map!  d$a
-map!  Ua
-map!  pa
-" Paragraph Folder
-map q !}nkf -w -Bmf59
-map q !}nkf -w -Bmf59
-" Execute Typed Command Macro
-map e "mdd@m
-" Read Typed file
-map ! 0i:r!"ndd@n
-" Comment/Uncomment
-map ; ^i/* A */^
-map u :s/\/\* \([^*]*\) \*\//\1
-" Incorporate mouse selection
-map i :r!xcb -p 0
-" Decode MIME selection
-map m !}nkf -w -m
-map j !}nkf -w -Bm
-" cut & page
-map v !aquaclip
-map c !}aquaclip put
-map a :0,$!aquaclip put
-" Windowing like Emacs
-map 0 :close
-map 1 :only
-map 2 :split
-map 5 :vsplit
-map o 
-map! 0 :close
-map! 1 :onlya
-map! 2 :splita
-map! 5 :vsplita
-map! o 
+"map!  A
+"map!  0I
+"map!  lli
+"map!  i
+"" map!  ka
+"" map!  ja
+"map!  :su
+"map!  d$a
+"map!  Ua
+"map!  pa
+"" Paragraph Folder
+"map q !}nkf -w -Bmf59
+"map q !}nkf -w -Bmf59
+"" Execute Typed Command Macro
+"map e "mdd@m
+"" Read Typed file
+"map ! 0i:r!"ndd@n
+"" Comment/Uncomment
+"map ; ^i/* A */^
+"map u :s/\/\* \([^*]*\) \*\//\1
+"" Incorporate mouse selection
+"map i :r!xcb -p 0
+"" Decode MIME selection
+"map m !}nkf -w -m
+"map j !}nkf -w -Bm
+"" cut & page
+"map v !aquaclip
+"map c !}aquaclip put
+"map a :0,$!aquaclip put
+"" Windowing like Emacs
+"map 0 :close
+"map 1 :only
+"map 2 :split
+"map 5 :vsplit
+"map o 
+"map! 0 :close
+"map! 1 :onlya
+"map! 2 :splita
+"map! 5 :vsplita
+"map! o 
 
 map n :GtagsCursor
 map p :Gtags -r ^
@@ -172,3 +173,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 "for wsl2
 set visualbell t_vb=
+
+autocmd BufNewFile,BufRead *.md set filetype=text
