@@ -2,7 +2,7 @@
 	name = AnaTofuZ
 	email = anatofuz@gmail.com
 	username = AnaTofuZ
-	signingkey = DC1F6F3E44EA4722
+	signingkey = 2B1ED6EF6C4BB71F
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

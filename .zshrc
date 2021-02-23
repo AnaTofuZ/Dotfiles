@@ -17,12 +17,8 @@ alias pbcopy="xsel --clipboard --input"
 #export PATH="/usr/local/go/bin:$PATH"
 #}}}
 # zsh-completions {{{
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
+autoload -U compinit
+compinit
 # }}}
 # zsh hook {{{
 autoload -Uz add-zsh-hook
@@ -290,7 +286,8 @@ alias   history="fc -l -d -$HISTSIZE"
 #prompt pure
 prompt='%S+%s%m%S+%s%n$ '
 # zsh syntax highlight {{{
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # }}}
 # anatofuz-tools {{{
 path=("$HOME/src/firefly/hg/Members/anatofuz/anatofuz-tools" $path)
@@ -418,3 +415,4 @@ eval "$(rakuenv init -)"
 export PATH="$HOME/workspace/tools/singularity-sif:$PATH"
 #}}}
 export EDITOR="/usr/bin/vim"
+export PATH="$HOME/bin:$PATH"
