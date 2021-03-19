@@ -26,8 +26,8 @@ autoload -Uz chpwd_recent_dirs cdr
 add-zsh-hook chpwd chpwd_recent_dirs
 # }}}
 # plenv {{{
-export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init -)"
+#export PATH="$HOME/.plenv/bin:$PATH"
+#eval "$(plenv init -)"
 # }}}
 # man {{{
 # cf. https://qiita.com/yu-ichiro/items/ea9c672e2d7488416db9
@@ -240,6 +240,7 @@ alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
 alias ltr="ls -ltr"
+alias latr="ls -latr"
 # }}}
 export LDFLAGS="-L/usr/local/opt/libffi/lib $LDFLAGS"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
@@ -358,7 +359,7 @@ function fdvim {
 }
 # }}}
 # libc man {{{
-export MANPATH="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/share/man:$MANPATH"
+#export MANPATH="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/share/man:$MANPATH"
 # }}}
 # history_peco {{{
 function peco-history-selection() {
@@ -412,7 +413,7 @@ export PATH="$HOME/.rakuenv/bin:$PATH"
 eval "$(rakuenv init -)"
 #}}}
 #singularity sif {{{
-export PATH="$HOME/workspace/tools/singularity-sif:$PATH"
+export PATH="$HOME/workspace/tool/singularity-sif:$PATH"
 #}}}
 export EDITOR="/usr/bin/vim"
 export PATH="$HOME/bin:$PATH"
